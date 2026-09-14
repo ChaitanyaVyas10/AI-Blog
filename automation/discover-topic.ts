@@ -41,11 +41,11 @@ export async function discoverTopics(openai: any, dryRun = false) {
     } catch (err) {
       if (attempt === 2) {
         console.error("[DISCOVERY] OpenAI error", err);
-        return [];
+        throw err;
       }
       console.warn("[DISCOVERY] Retrying structured response", err);
     }
   }
-  return [];
+  throw new Error("Discovery failed without a response");
 }
 
