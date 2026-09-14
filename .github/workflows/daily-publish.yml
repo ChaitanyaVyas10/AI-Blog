@@ -1,0 +1,47 @@
+name: Daily Publish
+
+on:
+  schedule:
+    # Run daily at 12:00 UTC (approx 8 AM US Eastern or 9 AM during DST depending on date)
+    - cron: '0 12 * * *'
+  workflow_dispatch: {}
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Run daily publishing script
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_WRITER_MODEL: ${{ secrets.OPENAI_WRITER_MODEL }}
+          OPENAI_EDITOR_MODEL: ${{ secrets.OPENAI_EDITOR_MODEL }}
+          OPENAI_RESEARCH_MODEL: ${{ secrets.OPENAI_RESEARCH_MODEL }}
+          GIT_USER_NAME: ${{ secrets.GIT_USER_NAME }}
+          GIT_USER_EMAIL: ${{ secrets.GIT_USER_EMAIL }}
+        run: |
+          node ./dist/automation/run-daily.js || true
+
+      - name: Push commits
+        if: always()
+        run: |
+          git config user.name "${{ secrets.GIT_USER_NAME }}"
+          git config user.email "${{ secrets.GIT_USER_EMAIL }}"
+          git add -A
+          git commit -m "chore: daily publish (CI)" || echo "no changes"
+          git push || echo "push failed"

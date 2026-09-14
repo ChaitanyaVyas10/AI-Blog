@@ -1,0 +1,39 @@
+---
+import Layout from '../layouts/Layout.astro';
+import fs from 'fs';
+import path from 'path';
+
+const postsDir = path.resolve('content/posts');
+let posts = [];
+try {
+  const files = fs.readdirSync(postsDir).filter(f=>f.endsWith('.md'));
+  posts = files.map(f=>{
+    const content = fs.readFileSync(path.join(postsDir,f),'utf-8');
+    const m = /---([\s\S]*?)---/.exec(content);
+    const front = m ? m[1] : '';
+    const titleMatch = /title:\s*"?(.*?)"?\n/.exec(front);
+    const dateMatch = /publishedAt:\s*"?(.*?)"?\n/.exec(front);
+    return { file: f, title: titleMatch?.[1] || f, date: dateMatch?.[1] || '' };
+  }).sort((a,b)=> (b.date||'').localeCompare(a.date||''));
+} catch(e){}
+---
+<Layout title="Home">
+  <section>
+    <h2>Latest</h2>
+    {posts.length>0 ? (
+      <article>
+        <h3>{posts[0].title}</h3>
+        <p>{posts[0].date}</p>
+      </article>
+    ) : (
+      <p>No posts yet. The automation will publish daily.</p>
+    )}
+
+    <h3>Recent</h3>
+    <ul>
+      {posts.slice(0,10).map(p=> (
+        <li><a href={`/posts/${p.file.replace('.md','')}`}>{p.title}</a> — {p.date}</li>
+      ))}
+    </ul>
+  </section>
+</Layout>

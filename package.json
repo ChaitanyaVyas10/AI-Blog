@@ -1,0 +1,30 @@
+{
+  "name": "ai-autonomous-news",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "tsc && astro build",
+    "preview": "astro preview",
+    "daily": "npm run build && node ./dist/automation/run-daily.js",
+    "daily:dry": "npm run build && node ./dist/automation/run-daily.js --dry-run",
+    "test": "vitest",
+    "lint": "eslint . --ext .ts,.js,.astro"
+  },
+  "dependencies": {
+    "astro": "^4.0.0",
+    "gray-matter": "^4.0.3",
+    "node-fetch": "^3.3.1",
+    "openai": "^4.3.1",
+    "slugify": "^1.6.6",
+    "zod": "^3.22.2",
+    "simple-git": "^3.19.1"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "ts-node": "^10.9.1",
+    "vitest": "^0.34.1",
+    "@types/node": "^20.0.0"
+  }
+}
