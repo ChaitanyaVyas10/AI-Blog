@@ -1,0 +1,36 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import matter from 'gray-matter';
+
+export function getStaticPaths() {
+  const sources = import.meta.glob('../../../content/posts/*.md', { eager: true, query: '?raw', import: 'default' });
+  return Object.entries(sources).map(([file, raw]) => {
+    const parsed = matter(raw as string);
+    const filename = file.split('/').pop() || '';
+    const post = { slug: filename.replace('.md', ''), ...parsed.data, body: parsed.content };
+    return { params: { slug: post.slug }, props: { post } };
+  });
+}
+
+const { post } = Astro.props;
+---
+<Layout title={post.title}>
+  <article>
+    <p>{post.category} · {post.publishedAt} · {post.readingTime}</p>
+    <h2>{post.title}</h2>
+    <p>{post.description}</p>
+    <div class="article-body">
+      <pre>{post.body}</pre>
+    </div>
+    <aside>
+      <strong>AI transparency</strong>
+      <p>This article was autonomously researched, written, and reviewed by an AI system using current publicly available sources. No routine human editorial approval was required.</p>
+    </aside>
+    <h3>Sources</h3>
+    <ul>
+      {post.sources?.map((source: any) => (
+        <li><a href={source.url} target="_blank" rel="noopener noreferrer">{source.title || source.url}</a></li>
+      ))}
+    </ul>
+  </article>
+</Layout>

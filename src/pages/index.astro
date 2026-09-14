@@ -1,29 +1,21 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import fs from 'fs';
-import path from 'path';
+import matter from 'gray-matter';
 
-const postsDir = path.resolve('content/posts');
-let posts = [];
-try {
-  const files = fs.readdirSync(postsDir).filter(f=>f.endsWith('.md'));
-  posts = files.map(f=>{
-    const content = fs.readFileSync(path.join(postsDir,f),'utf-8');
-    const m = /---([\s\S]*?)---/.exec(content);
-    const front = m ? m[1] : '';
-    const titleMatch = /title:\s*"?(.*?)"?\n/.exec(front);
-    const dateMatch = /publishedAt:\s*"?(.*?)"?\n/.exec(front);
-    return { file: f, title: titleMatch?.[1] || f, date: dateMatch?.[1] || '' };
-  }).sort((a,b)=> (b.date||'').localeCompare(a.date||''));
-} catch(e){}
+const sources = import.meta.glob('../../content/posts/*.md', { eager: true, query: '?raw', import: 'default' });
+const posts = Object.entries(sources).map(([file, raw]) => {
+  const parsed = matter(raw as string);
+  const filename = file.split('/').pop() || '';
+  return { file: filename, ...parsed.data };
+}).sort((a, b) => String(b.publishedAt || '').localeCompare(String(a.publishedAt || '')));
 ---
 <Layout title="Home">
   <section>
     <h2>Latest</h2>
     {posts.length>0 ? (
       <article>
-        <h3>{posts[0].title}</h3>
-        <p>{posts[0].date}</p>
+        <h3><a href={`/posts/${posts[0].file.replace('.md','')}`}>{posts[0].title}</a></h3>
+        <p>{posts[0].publishedAt}</p>
       </article>
     ) : (
       <p>No posts yet. The automation will publish daily.</p>
@@ -32,7 +24,7 @@ try {
     <h3>Recent</h3>
     <ul>
       {posts.slice(0,10).map(p=> (
-        <li><a href={`/posts/${p.file.replace('.md','')}`}>{p.title}</a> — {p.date}</li>
+        <li><a href={`/posts/${p.file.replace('.md','')}`}>{p.title}</a> — {p.publishedAt}</li>
       ))}
     </ul>
   </section>
