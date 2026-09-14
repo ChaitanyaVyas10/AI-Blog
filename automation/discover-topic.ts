@@ -42,10 +42,18 @@ export async function discoverTopics(openai: any, dryRun = false) {
       }
       const parsed = parseJsonResponse(raw);
       const candidates = Array.isArray(parsed) ? parsed : parsed.candidates || [];
-      const groundedCandidates = candidates.map((candidate: any) => ({
-        ...candidate,
-        sourceItems: selectCurrentSources(candidate, newsItems)
-      }));
+      const groundedCandidates = candidates.map((candidate: any) => {
+        const sourceItems = selectCurrentSources(candidate, newsItems);
+        if (sourceItems.length > 0) return { ...candidate, sourceItems };
+        const fallback = newsItems[0];
+        return {
+          ...candidate,
+          title: fallback.title,
+          topic: fallback.title,
+          reason: `A current story from ${fallback.publisher} is available for analysis.`,
+          sourceItems: [fallback]
+        };
+      });
       const usableCandidates = groundedCandidates.filter((candidate: any) => candidate.sourceItems.length > 0);
       if (usableCandidates.length > 0) return usableCandidates;
 

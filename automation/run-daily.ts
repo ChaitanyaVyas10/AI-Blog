@@ -23,6 +23,16 @@ async function main() {
 
   console.log(`[RUN] dryRun=${dryRun}`);
 
+  if (!dryRun) {
+    const today = new Date().toISOString().slice(0, 10);
+    const postsDir = path.resolve("content/posts");
+    const existingArticle = fs.existsSync(postsDir) && fs.readdirSync(postsDir).some((file) => file.startsWith(`${today}-`) && file.endsWith(".md"));
+    if (existingArticle) {
+      console.log(`[PUBLISH] Article already exists for ${today}; skipping all AI calls`);
+      return;
+    }
+  }
+
   const history = readTopicHistory();
   const candidates = await discoverTopics(openai, dryRun);
   if (!candidates || candidates.length === 0) {
