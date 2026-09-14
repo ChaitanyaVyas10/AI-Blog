@@ -40,9 +40,3 @@ export async function discoverTopics(openai: any, dryRun = false) {
   }
 }
 
-if (require.main === module) {
-  (async () => {
-    const res = await discoverTopics(null, true);
-    console.log(JSON.stringify(res, null, 2));
-  })();
-}

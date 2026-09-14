@@ -7,8 +7,8 @@
     "dev": "astro dev",
     "build": "tsc && astro build",
     "preview": "astro preview",
-    "daily": "npm run build && node ./dist/automation/run-daily.js",
-    "daily:dry": "npm run build && node ./dist/automation/run-daily.js --dry-run",
+    "daily": "tsx automation/run-daily.ts",
+    "daily:dry": "tsx automation/run-daily.ts --dry-run",
     "test": "vitest",
     "lint": "eslint . --ext .ts,.js,.astro"
   },
@@ -24,6 +24,7 @@
   "devDependencies": {
     "typescript": "^5.0.0",
     "ts-node": "^10.9.1",
+    "tsx": "^4.19.2",
     "vitest": "^0.34.1",
     "@types/node": "^20.0.0"
   }
