@@ -30,6 +30,7 @@ export async function researchTopic(openai: any, topic: any, dryRun = false) {
         { role: "system", content: researchSystem },
         { role: "user", content: `Research the following topic and produce a structured JSON research package: ${JSON.stringify(topic)}` }
       ],
+      response_format: { type: "json_object" },
       max_tokens: 2000
     });
     const raw = resp.choices?.[0]?.message?.content || resp.choices?.[0]?.text || "";

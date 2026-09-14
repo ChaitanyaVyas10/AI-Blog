@@ -28,11 +28,12 @@ export async function discoverTopics(openai: any, dryRun = false) {
         { role: "system", content: topicDiscoverySystem },
         { role: "user", content: topicDiscoveryUser }
       ],
+      response_format: { type: "json_object" },
       max_tokens: 800
     });
     const raw = resp.choices?.[0]?.message?.content || resp.choices?.[0]?.text || "";
     const parsed = parseJsonResponse(raw);
-    return parsed;
+    return Array.isArray(parsed) ? parsed : parsed.candidates || [];
   } catch (err) {
     console.error("[DISCOVERY] OpenAI error", err);
     return [];

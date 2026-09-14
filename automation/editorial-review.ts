@@ -13,6 +13,7 @@ export async function editorialReview(openai: any, draft: any, researchPackage: 
         { role: "system", content: editorSystem },
         { role: "user", content: `Review the following draft and research package. Draft: ${JSON.stringify(draft)} Research: ${JSON.stringify(researchPackage)}` }
       ],
+      response_format: { type: "json_object" },
       max_tokens: 2000
     });
     const raw = resp.choices?.[0]?.message?.content || resp.choices?.[0]?.text || "";
