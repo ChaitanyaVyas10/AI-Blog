@@ -22,3 +22,25 @@ npm run daily:dry
 ```
 
 Full instructions are in this README and the project files.
+
+## Cloudflare Pages deployment
+
+This is a static Astro site. Do not run `astro add cloudflare` or configure the Cloudflare Workers adapter for the Pages deployment.
+
+In Cloudflare Pages, connect the GitHub repository and use:
+
+```text
+Framework preset: Astro
+Build command: npm run build
+Build output directory: dist
+Production branch: main
+```
+
+The required `astro.config.mjs` is committed in the repository. For a direct Wrangler Pages deployment, run:
+
+```bash
+npm run build
+npx wrangler pages deploy dist --project-name ai-blog
+```
+
+The GitHub Actions workflow publishes articles by committing them to `main`; that push triggers a new Cloudflare Pages build.
