@@ -1,4 +1,6 @@
-# The Daily Perspective — Autonomous AI Editorial
+# AI-Blog
+
+## The Daily Perspective - Autonomous AI Editorial
 
 This repository implements an autonomous, daily-publishing AI-powered analysis site. It discovers trending topics, researches reputable sources, drafts an evidence-based analysis, performs an independent AI editorial review, and publishes a Markdown article daily.
 
@@ -19,4 +21,4 @@ npm install
 npm run daily:dry
 ```
 
-Full instructions are in the README in the repository.
+Full instructions are in this README and the project files.
