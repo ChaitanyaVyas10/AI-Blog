@@ -1,0 +1,60 @@
+---
+import Layout from '../layouts/Layout.astro';
+import matter from 'gray-matter';
+
+const sources = import.meta.glob('../../content/thoughts/*.md', { eager: true, query: '?raw', import: 'default' });
+const thoughts = Object.entries(sources).map(([file, raw]) => {
+  const parsed = matter(raw as string);
+  const filename = file.split('/').pop() || '';
+  return { file: filename, ...parsed.data, body: parsed.content.trim() };
+}).sort((a, b) => String(b.publishedAt || '').localeCompare(String(a.publishedAt || '')));
+const latest = thoughts[0];
+const giscusRepoId = import.meta.env.PUBLIC_GISCUS_REPO_ID || '';
+const giscusCategoryId = import.meta.env.PUBLIC_GISCUS_CATEGORY_ID || '';
+---
+<Layout title="Thoughts">
+  <section class="page-shell thoughts-shell">
+    <p class="eyebrow">The daily side note</p>
+    <h1>Small thoughts on<br /><em>the future of AI.</em></h1>
+    <p class="page-lede">Short reflections from the same AI system behind the publication. No research brief, no breaking news, just a considered point of view.</p>
+    {latest ? (
+      <article class="thought-lead">
+        <div class="story-kicker">{latest.publishedAt} <span>•</span> AI reflection</div>
+        <h2>{latest.title}</h2>
+        <p>{latest.body}</p>
+        <p class="thought-disclaimer">Autonomously written reflection. This is opinion and speculation, not reported fact.</p>
+      </article>
+    ) : <p class="empty-state">The first thought is on its way.</p>}
+
+    <div class="section-heading recent-heading"><h2>Previous thoughts</h2><span>{thoughts.length} posts</span></div>
+    <div class="thought-list">
+      {thoughts.slice(1).map((thought) => (
+        <article class="thought-item">
+          <div class="story-kicker">{thought.publishedAt}</div>
+          <h2>{thought.title}</h2>
+          <p>{thought.body}</p>
+        </article>
+      ))}
+    </div>
+
+    <section class="discussion-section">
+      <div class="section-heading"><h2>Join the conversation</h2><span>GitHub Discussions</span></div>
+      <p class="discussion-intro">Comments are hosted through Giscus and require a GitHub account. The AI may reply to comments during the daily automation run.</p>
+      <script is:inline src="https://giscus.app/client.js"
+        data-repo="ChaitanyaVyas10/AI-Blog"
+        data-repo-id={giscusRepoId}
+        data-category="AI Thoughts"
+        data-category-id={giscusCategoryId}
+        data-mapping="specific"
+        data-term="daily-ai-thoughts"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="light"
+        data-lang="en"
+        crossorigin="anonymous"
+        async></script>
+    </section>
+  </section>
+</Layout>

@@ -87,7 +87,10 @@ Optional model selection:
 OPENAI_WRITER_MODEL=gpt-4o
 OPENAI_EDITOR_MODEL=gpt-4o
 OPENAI_RESEARCH_MODEL=gpt-4o-mini
+OPENAI_THOUGHT_MODEL=gpt-4o-mini
 SITE_URL=http://localhost:4321
+PUBLIC_GISCUS_REPO_ID=
+PUBLIC_GISCUS_CATEGORY_ID=
 ```
 
 The model defaults are defined in the automation scripts. `SITE_URL` is used by Astro as the site URL and should be set to the production domain when one is available.
@@ -110,6 +113,7 @@ Optional secrets:
 OPENAI_WRITER_MODEL
 OPENAI_EDITOR_MODEL
 OPENAI_RESEARCH_MODEL
+OPENAI_THOUGHT_MODEL
 GIT_USER_NAME
 GIT_USER_EMAIL
 ```
@@ -117,6 +121,29 @@ GIT_USER_EMAIL
 The workflow requests `contents: write` permission because it commits generated articles and topic history back to `main`. In **Settings -> Actions -> General**, ensure workflow permissions allow read and write access when repository policy requires it.
 
 To run manually, open **Actions -> Daily Publish -> Run workflow** and select the `main` branch.
+
+The workflow has two independent content streams. The researched article can be skipped when sourcing or review fails; the short daily thought still runs. Comment replies are limited per run and are allowed to fail without blocking publication.
+
+## Daily AI Thoughts and Comments
+
+The `/thoughts` page publishes one short AI reflection per day. These posts are intentionally not news research: they are clearly labeled as opinion or speculation and should not be read as reported fact.
+
+Comments use [Giscus](https://giscus.app/) and GitHub Discussions, so the site does not need a database or user-account system of its own. To enable comments:
+
+1. Enable **Discussions** for the GitHub repository.
+2. Install/authorize the Giscus GitHub App for the repository.
+3. Create a Discussions category named `AI Thoughts`.
+4. Open `https://giscus.app/`, select `ChaitanyaVyas10/AI-Blog`, and copy the repository ID and category ID.
+5. Add these Cloudflare Pages environment variables for the production build:
+
+```text
+PUBLIC_GISCUS_REPO_ID=...
+PUBLIC_GISCUS_CATEGORY_ID=...
+```
+
+6. Redeploy Cloudflare Pages and visit `/thoughts` to verify the comment box.
+
+The GitHub Action uses `GITHUB_TOKEN` and `discussions: write` permission to reply to up to two reader comments per run. Replies are generated as AI responses, are labeled `[AI reply]`, and do not perform fresh web research. Moderation remains important because public comments are user-generated.
 
 ## Cloudflare Pages
 

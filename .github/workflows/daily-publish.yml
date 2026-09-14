@@ -8,6 +8,7 @@ on:
 
 permissions:
   contents: write
+  discussions: write
 
 jobs:
   publish:
@@ -25,16 +26,36 @@ jobs:
         run: npm ci
 
       - name: Run daily publishing script
+        continue-on-error: true
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_WRITER_MODEL: ${{ secrets.OPENAI_WRITER_MODEL }}
           OPENAI_EDITOR_MODEL: ${{ secrets.OPENAI_EDITOR_MODEL }}
           OPENAI_RESEARCH_MODEL: ${{ secrets.OPENAI_RESEARCH_MODEL }}
+          OPENAI_THOUGHT_MODEL: ${{ secrets.OPENAI_THOUGHT_MODEL }}
           GIT_USER_NAME: ${{ secrets.GIT_USER_NAME }}
           GIT_USER_EMAIL: ${{ secrets.GIT_USER_EMAIL }}
         run: npm run daily
 
+      - name: Publish daily AI thought
+        if: always()
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_THOUGHT_MODEL: ${{ secrets.OPENAI_THOUGHT_MODEL }}
+        run: npm run thoughts
+
+      - name: Reply to thought comments
+        if: always()
+        continue-on-error: true
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_THOUGHT_MODEL: ${{ secrets.OPENAI_THOUGHT_MODEL }}
+          GITHUB_TOKEN: ${{ github.token }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: npm run thoughts:reply
+
       - name: Push commits
+        if: always()
         env:
           GIT_USER_NAME: ${{ secrets.GIT_USER_NAME }}
           GIT_USER_EMAIL: ${{ secrets.GIT_USER_EMAIL }}

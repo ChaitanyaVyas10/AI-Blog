@@ -46,6 +46,10 @@ Describes the discovery, research, writing, review, and publication stages.
 
 Imports Markdown posts at build time and lists available posts in date order. It does not depend on runtime filesystem access, which keeps it compatible with static Cloudflare Pages builds.
 
+### `src/pages/thoughts.astro`
+
+Displays the short daily AI reflection stream and embeds Giscus comments backed by GitHub Discussions. Giscus repository and category IDs are supplied through public build-time environment variables.
+
 ### `src/config.ts`
 
 Central site configuration. This is the place to change the publication name, description, URL, author, and supported categories.
@@ -100,6 +104,14 @@ Shared helpers for topic history, slug generation, reading-time estimation, and 
 
 Dedicated prompt modules for discovery, research, writing, and editorial review. Keeping prompts separate makes editorial rules easy to inspect and change.
 
+### `automation/publish-thought.ts`
+
+Creates one short, no-research AI reflection per UTC day in `content/thoughts/`. It skips the date if a thought already exists.
+
+### `automation/reply-to-thoughts.ts`
+
+Reads recent GitHub Discussions comments and posts a bounded number of labeled AI replies. It uses the workflow's GitHub token and does not perform web research.
+
 ## Build and Deployment
 
 ### `astro.config.mjs`
@@ -117,6 +129,9 @@ Defines dependencies and commands:
 | `npm run preview` | Preview the production build locally |
 | `npm run daily` | Run live daily automation |
 | `npm run daily:dry` | Run automation without publication changes |
+| `npm run thoughts` | Generate the live daily AI thought |
+| `npm run thoughts:dry` | Preview a thought without writing it |
+| `npm run thoughts:reply` | Reply to eligible GitHub Discussion comments |
 | `npm test` | Run Vitest tests |
 
 ### `.github/workflows/daily-publish.yml`
