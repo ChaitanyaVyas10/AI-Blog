@@ -30,7 +30,7 @@ export async function discoverTopics(openai: any, dryRun = false) {
         model: process.env.OPENAI_RESEARCH_MODEL || "gpt-4o-mini",
         messages: [
           { role: "system", content: topicDiscoverySystem },
-          { role: "user", content: `${topicDiscoveryUser} Return no more than 8 candidates. Use only stories represented in this current feed. Include sourceItems as an array of source URLs supporting each candidate.\n\nCURRENT FEED ITEMS:\n${currentNews}` }
+          { role: "user", content: `${topicDiscoveryUser} Return no more than 8 candidates. Use only stories represented in this current feed. Include sourceIndexes as an array of feed item numbers supporting each candidate.\n\nCURRENT FEED ITEMS:\n${currentNews}` }
         ],
         response_format: { type: "json_object" },
         max_tokens: 1800
@@ -42,10 +42,26 @@ export async function discoverTopics(openai: any, dryRun = false) {
       }
       const parsed = parseJsonResponse(raw);
       const candidates = Array.isArray(parsed) ? parsed : parsed.candidates || [];
-      return candidates.map((candidate: any) => ({
+      const groundedCandidates = candidates.map((candidate: any) => ({
         ...candidate,
         sourceItems: selectCurrentSources(candidate, newsItems)
       }));
+      const usableCandidates = groundedCandidates.filter((candidate: any) => candidate.sourceItems.length > 0);
+      if (usableCandidates.length > 0) return usableCandidates;
+
+      const fallback = newsItems[0];
+      return [{
+        title: fallback.title,
+        topic: fallback.title,
+        category: "World",
+        reason: `A current story from ${fallback.publisher} is available for analysis.`,
+        keywords: fallback.title.split(/\s+/).slice(0, 6),
+        importanceScore: 50,
+        interestScore: 50,
+        sourceQualityScore: 70,
+        noveltyScore: 70,
+        sourceItems: [fallback]
+      }];
     } catch (err) {
       if (attempt === 2) {
         console.error("[DISCOVERY] OpenAI error", err);
