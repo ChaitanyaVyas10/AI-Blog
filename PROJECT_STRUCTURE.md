@@ -24,11 +24,11 @@ This document explains the responsibilities of the main files in AI-Blog.
 
 ### `src/layouts/Layout.astro`
 
-Shared document shell for the site. It renders the page title, site header, main content slot, stylesheet, and footer.
+Shared document shell for the site. It renders the page title, responsive navigation, main content slot, stylesheet, and editorial footer.
 
 ### `src/pages/index.astro`
 
-Homepage. It imports Markdown posts at build time, sorts them by `publishedAt`, and displays the latest and recent articles.
+Homepage. It imports Markdown posts at build time, sorts them by `publishedAt`, and displays the latest analysis and recent story cards.
 
 ### `src/pages/posts/[slug].astro`
 
@@ -44,7 +44,7 @@ Describes the discovery, research, writing, review, and publication stages.
 
 ### `src/pages/archive.astro`
 
-Lists available posts in date order.
+Imports Markdown posts at build time and lists available posts in date order. It does not depend on runtime filesystem access, which keeps it compatible with static Cloudflare Pages builds.
 
 ### `src/config.ts`
 
@@ -52,7 +52,7 @@ Central site configuration. This is the place to change the publication name, de
 
 ### `public/styles.css`
 
-Global static stylesheet. Assets in `public/` are copied directly to the final `dist/` output.
+Global static stylesheet. It defines the responsive editorial visual system: typography, warm paper palette, teal accents, navigation, story cards, article layouts, source lists, and mobile breakpoints. Assets in `public/` are copied directly to the final `dist/` output.
 
 ## Content and Data
 

@@ -1,29 +1,27 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import fs from 'fs';
-import path from 'path';
+import matter from 'gray-matter';
 
-const postsDir = path.resolve('content/posts');
-let posts = [];
-try {
-  const files = fs.readdirSync(postsDir).filter(f=>f.endsWith('.md'));
-  posts = files.map(f=>{
-    const content = fs.readFileSync(path.join(postsDir,f),'utf-8');
-    const m = /---([\s\S]*?)---/.exec(content);
-    const front = m ? m[1] : '';
-    const titleMatch = /title:\s*"?(.*?)"?\n/.exec(front);
-    const dateMatch = /publishedAt:\s*"?(.*?)"?\n/.exec(front);
-    return { file: f, title: titleMatch?.[1] || f, date: dateMatch?.[1] || '' };
-  }).sort((a,b)=> (b.date||'').localeCompare(a.date||''));
-} catch(e){}
+const sources = import.meta.glob('../../content/posts/*.md', { eager: true, query: '?raw', import: 'default' });
+const posts = Object.entries(sources).map(([file, raw]) => {
+  const parsed = matter(raw as string);
+  const filename = file.split('/').pop() || '';
+  return { file: filename, ...parsed.data };
+}).sort((a, b) => String(b.publishedAt || '').localeCompare(String(a.publishedAt || '')));
 ---
 <Layout title="Archive">
-  <section>
-    <h2>Archive</h2>
-    <ul>
+  <section class="page-shell">
+    <p class="eyebrow">The complete record</p>
+    <h1>Archive</h1>
+    <p class="page-lede">A chronological record of autonomous analysis, with sources attached to every story.</p>
+    <div class="archive-list">
       {posts.map(p=> (
-        <li><a href={`/posts/${p.file.replace('.md','')}`}>{p.title}</a> — {p.date}</li>
+        <a class="archive-item" href={`/posts/${p.file.replace('.md','')}`}>
+          <span class="archive-date">{p.publishedAt}</span>
+          <strong>{p.title}</strong>
+          <span class="archive-category">{p.category || 'World'} ↗</span>
+        </a>
       ))}
-    </ul>
+    </div>
   </section>
 </Layout>

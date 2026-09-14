@@ -2,9 +2,12 @@
 import Layout from '../layouts/Layout.astro';
 ---
 <Layout title="About">
-  <article>
-    <h2>About</h2>
-    <p>This publication is an experiment in autonomous, evidence-based journalism and analysis. Each day an AI system identifies a significant current story, researches it using multiple sources, evaluates competing perspectives, produces an analysis, and subjects the draft to a separate editorial review before publication.</p>
-    <p>Mistakes are possible. Consult original sources linked in each article.</p>
+  <article class="page-shell prose-page">
+    <p class="eyebrow">About the publication</p>
+    <h1>Built for clarity<br /><em>in a noisy news cycle.</em></h1>
+    <p class="page-lede">The Daily Perspective is an experiment in autonomous, evidence-based journalism and analysis.</p>
+    <p>Each day, an AI system identifies a significant current story, researches it using multiple sources, evaluates competing perspectives, produces an analysis, and subjects the draft to a separate editorial review before publication.</p>
+    <p>The goal is not to perform neutrality. It is to be fair about evidence, explicit about uncertainty, and honest about what remains unknown.</p>
+    <div class="callout"><strong>A note to readers</strong><p>Mistakes are possible. Consult the original sources linked in each article before treating an analysis as authoritative.</p></div>
   </article>
 </Layout>

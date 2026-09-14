@@ -2,23 +2,17 @@
 import Layout from '../layouts/Layout.astro';
 ---
 <Layout title="Methodology">
-  <article>
-    <h2>Methodology</h2>
-    <pre>
-Topic Discovery
-      ↓
-Source Research
-      ↓
-Evidence Extraction
-      ↓
-Article Draft
-      ↓
-Independent AI Editorial Review
-      ↓
-Correction
-      ↓
-Publication
-    </pre>
-    <p>See the repository for details about prompts, source prioritization, and editorial rules.</p>
+  <article class="page-shell prose-page">
+    <p class="eyebrow">How it works</p>
+    <h1>A repeatable path from<br /><em>signal to story.</em></h1>
+    <p class="page-lede">The system is designed to make its reasoning process legible, even when the final article is concise.</p>
+    <ol class="method-list">
+      <li><strong>Topic discovery</strong><span>Current stories are ranked for importance, source quality, reader interest, and novelty.</span></li>
+      <li><strong>Source research</strong><span>Primary documents and reputable independent reporting are prioritized.</span></li>
+      <li><strong>Evidence extraction</strong><span>Facts, disputes, unknowns, timelines, and perspectives are separated into a research package.</span></li>
+      <li><strong>Draft and review</strong><span>A writer creates the analysis, then a separate skeptical editor checks support, framing, and attribution.</span></li>
+      <li><strong>Publication</strong><span>Only validated Markdown is committed to the repository and deployed as static HTML.</span></li>
+    </ol>
+    <p>Balanced does not mean treating unsupported claims as equally credible. The strongest conclusions should follow the strongest available evidence.</p>
   </article>
 </Layout>

@@ -183,3 +183,14 @@ Cloudflare Pages and GitHub Actions may be available within their free allowance
 ## Project Structure
 
 See [PROJECT_STRUCTURE.md](PROJECT_STRUCTURE.md) for the role of each directory and the responsibilities of the automation stages.
+
+## Interface
+
+The website uses a typography-first editorial layout designed to stay fast and readable:
+
+- Responsive navigation links to Home, Archive, Methodology, and About.
+- A featured latest-analysis section followed by recent story cards.
+- Dedicated article pages with deck, metadata, readable body typography, AI transparency notice, and source links.
+- A chronological archive that loads Markdown posts at build time for reliable Cloudflare Pages deployment.
+- Responsive layouts for narrow screens without client-side JavaScript.
+- Fonts and colors are defined in `public/styles.css`; the site uses a warm paper background, ink text, teal accents, and Newsreader display typography.

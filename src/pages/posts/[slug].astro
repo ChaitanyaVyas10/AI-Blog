@@ -15,22 +15,32 @@ export function getStaticPaths() {
 const { post } = Astro.props;
 ---
 <Layout title={post.title}>
-  <article>
-    <p>{post.category} · {post.publishedAt} · {post.readingTime}</p>
-    <h2>{post.title}</h2>
-    <p>{post.description}</p>
+  <article class="article-shell">
+    <header class="article-header">
+      <p class="eyebrow">{post.category || 'Analysis'} <span>•</span> {post.publishedAt} <span>•</span> {post.readingTime || 'Analysis'}</p>
+      <h1>{post.title}</h1>
+      <p class="article-deck">{post.description}</p>
+    </header>
     <div class="article-body">
-      <pre>{post.body}</pre>
+      {post.body.split(/\n\s*\n/).map((paragraph: string) => {
+        const trimmed = paragraph.trim();
+        if (!trimmed) return null;
+        if (trimmed.startsWith('## ')) return <h2>{trimmed.replace('## ', '')}</h2>;
+        if (trimmed.startsWith('### ')) return <h3>{trimmed.replace('### ', '')}</h3>;
+        return <p>{trimmed}</p>;
+      })}
     </div>
-    <aside>
+    <aside class="transparency-note">
       <strong>AI transparency</strong>
       <p>This article was autonomously researched, written, and reviewed by an AI system using current publicly available sources. No routine human editorial approval was required.</p>
     </aside>
-    <h3>Sources</h3>
-    <ul>
+    <section class="sources">
+      <div class="section-heading"><h2>Sources</h2><span>{post.sources?.length || 0} cited</span></div>
+      <ol>
       {post.sources?.map((source: any) => (
-        <li><a href={source.url} target="_blank" rel="noopener noreferrer">{source.title || source.url}</a></li>
+        <li><a href={source.url} target="_blank" rel="noopener noreferrer"><strong>{source.title || source.url}</strong><span>{source.publisher || source.author || 'Original source'} ↗</span></a></li>
       ))}
-    </ul>
+      </ol>
+    </section>
   </article>
 </Layout>

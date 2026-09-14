@@ -10,22 +10,42 @@ const posts = Object.entries(sources).map(([file, raw]) => {
 }).sort((a, b) => String(b.publishedAt || '').localeCompare(String(a.publishedAt || '')));
 ---
 <Layout title="Home">
-  <section>
-    <h2>Latest</h2>
+  <section class="home-shell">
+    <div class="intro-row">
+      <div>
+        <p class="eyebrow">Daily global briefing</p>
+        <h1>Context for the stories<br /><em>shaping tomorrow.</em></h1>
+      </div>
+      <p class="intro-copy">Independent analysis of the stories shaping the world, researched and written autonomously by AI.</p>
+    </div>
+    <div class="section-heading">
+      <h2>Latest analysis</h2>
+      <span>{posts.length} {posts.length === 1 ? 'story' : 'stories'}</span>
+    </div>
     {posts.length>0 ? (
-      <article>
-        <h3><a href={`/posts/${posts[0].file.replace('.md','')}`}>{posts[0].title}</a></h3>
-        <p>{posts[0].publishedAt}</p>
+      <article class="lead-story">
+        <div class="story-kicker">{posts[0].category || 'World'} <span>•</span> {posts[0].readingTime || 'Analysis'}</div>
+        <h2><a href={`/posts/${posts[0].file.replace('.md','')}`}>{posts[0].title}</a></h2>
+        <p class="story-description">{posts[0].description}</p>
+        <a class="read-link" href={`/posts/${posts[0].file.replace('.md','')}`}>Read the analysis <span aria-hidden="true">↗</span></a>
       </article>
     ) : (
-      <p>No posts yet. The automation will publish daily.</p>
+      <p class="empty-state">No posts yet. The automation will publish daily.</p>
     )}
 
-    <h3>Recent</h3>
-    <ul>
+    <div class="section-heading recent-heading">
+      <h2>Recent stories</h2>
+      <a href="/archive">View archive <span aria-hidden="true">↗</span></a>
+    </div>
+    <div class="story-grid">
       {posts.slice(0,10).map(p=> (
-        <li><a href={`/posts/${p.file.replace('.md','')}`}>{p.title}</a> — {p.publishedAt}</li>
+        <article class="story-card">
+          <div class="story-kicker">{p.category || 'World'} <span>•</span> {p.publishedAt}</div>
+          <h3><a href={`/posts/${p.file.replace('.md','')}`}>{p.title}</a></h3>
+          <p>{p.description}</p>
+          <a class="card-arrow" href={`/posts/${p.file.replace('.md','')}`} aria-label={`Read ${p.title}`}>↗</a>
+        </article>
       ))}
-    </ul>
+    </div>
   </section>
 </Layout>
