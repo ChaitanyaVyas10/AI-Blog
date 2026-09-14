@@ -1,5 +1,5 @@
 import { researchSystem } from "./prompts/research";
-import { parseJsonResponse } from "./utilities";
+import { fetchSourceExcerpt, parseJsonResponse } from "./utilities";
 
 export async function researchTopic(openai: any, topic: any, dryRun = false) {
   if (dryRun) {
@@ -25,11 +25,15 @@ export async function researchTopic(openai: any, topic: any, dryRun = false) {
   try {
     const sourceItems = topic.sourceItems || [];
     if (sourceItems.length === 0) throw new Error("Selected topic was not linked to a current feed item");
+    const sourcePacket = await Promise.all(sourceItems.map(async (item: any) => ({
+      ...item,
+      excerpt: await fetchSourceExcerpt(item.url)
+    })));
     const resp = await openai.chat.completions.create({
       model: process.env.OPENAI_RESEARCH_MODEL || "gpt-4o-mini",
       messages: [
         { role: "system", content: researchSystem },
-        { role: "user", content: `Research the following current topic using only the supplied current source items. Preserve source URLs exactly, do not invent sources, and return at least four usable sources when the source items allow it. Produce a structured JSON research package.\n\nTOPIC:\n${JSON.stringify(topic)}\n\nCURRENT SOURCE ITEMS:\n${JSON.stringify(sourceItems)}` }
+        { role: "user", content: `Research the following current topic using only the supplied source records and excerpts. If the excerpts are incomplete, state uncertainty rather than filling gaps from memory. Preserve source URLs exactly, do not invent sources, and produce a structured JSON research package.\n\nTOPIC:\n${JSON.stringify(topic)}\n\nSOURCE RECORDS AND EXCERPTS:\n${JSON.stringify(sourcePacket)}` }
       ],
       response_format: { type: "json_object" },
       max_tokens: 2000

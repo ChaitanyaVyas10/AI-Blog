@@ -44,6 +44,28 @@ export async function fetchNewsItems(): Promise<NewsItem[]> {
   return items.slice(0, 40);
 }
 
+export async function fetchSourceExcerpt(url: string): Promise<string> {
+  try {
+    const response = await fetch(url, {
+      signal: AbortSignal.timeout(Number(process.env.NEWS_FEED_TIMEOUT_MS || 12000)),
+      headers: { "User-Agent": "AI-Blog research reader/1.0" }
+    });
+    if (!response.ok) return "";
+    const html = await response.text();
+    return html
+      .replace(/<script[\s\S]*?<\/script>/gi, " ")
+      .replace(/<style[\s\S]*?<\/style>/gi, " ")
+      .replace(/<[^>]+>/g, " ")
+      .replace(/&nbsp;|&#160;/gi, " ")
+      .replace(/&amp;/gi, "&")
+      .replace(/\s+/g, " ")
+      .trim()
+      .slice(0, 6000);
+  } catch {
+    return "";
+  }
+}
+
 export const topicHistorySchema = z.array(z.object({
   date: z.string(),
   title: z.string(),
