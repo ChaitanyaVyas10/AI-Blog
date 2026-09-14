@@ -1,4 +1,3 @@
-import fs from "fs";
 import { topicDiscoverySystem, topicDiscoveryUser } from "./prompts/topic-discovery";
 import { parseJsonResponse } from "./utilities";
 
@@ -20,23 +19,33 @@ export async function discoverTopics(openai: any, dryRun = false) {
     ];
   }
 
-  // Real implementation: call OpenAI with a system+user prompt and parse JSON.
-  try {
-    const resp = await openai.chat.completions.create({
-      model: process.env.OPENAI_RESEARCH_MODEL || "gpt-4o-mini",
-      messages: [
-        { role: "system", content: topicDiscoverySystem },
-        { role: "user", content: topicDiscoveryUser }
-      ],
-      response_format: { type: "json_object" },
-      max_tokens: 800
-    });
-    const raw = resp.choices?.[0]?.message?.content || resp.choices?.[0]?.text || "";
-    const parsed = parseJsonResponse(raw);
-    return Array.isArray(parsed) ? parsed : parsed.candidates || [];
-  } catch (err) {
-    console.error("[DISCOVERY] OpenAI error", err);
-    return [];
+  // Keep discovery compact so the structured response cannot be cut off mid-JSON.
+  for (let attempt = 1; attempt <= 2; attempt += 1) {
+    try {
+      const resp = await openai.chat.completions.create({
+        model: process.env.OPENAI_RESEARCH_MODEL || "gpt-4o-mini",
+        messages: [
+          { role: "system", content: topicDiscoverySystem },
+          { role: "user", content: `${topicDiscoveryUser} Return no more than 8 candidates.` }
+        ],
+        response_format: { type: "json_object" },
+        max_tokens: 1800
+      });
+      const choice = resp.choices?.[0];
+      const raw = choice?.message?.content || choice?.text || "";
+      if (choice?.finish_reason === "length") {
+        throw new Error("Discovery response was truncated");
+      }
+      const parsed = parseJsonResponse(raw);
+      return Array.isArray(parsed) ? parsed : parsed.candidates || [];
+    } catch (err) {
+      if (attempt === 2) {
+        console.error("[DISCOVERY] OpenAI error", err);
+        return [];
+      }
+      console.warn("[DISCOVERY] Retrying structured response", err);
+    }
   }
+  return [];
 }
 
