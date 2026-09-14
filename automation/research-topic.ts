@@ -38,8 +38,11 @@ export async function researchTopic(openai: any, topic: any, dryRun = false) {
     const allowedUrls = new Set(sourceItems.map((item: any) => typeof item === "string" ? item : item.url));
     parsed.sources = (parsed.sources || []).filter((source: any) => source?.url && allowedUrls.has(source.url));
     if (parsed.sources.length === 0) {
-      throw new Error("Research returned no sources from the current feed packet");
+      parsed.sources = sourceItems.map((item: any) => typeof item === "string"
+        ? { title: topic.title, publisher: "Current news feed", url: item }
+        : { title: item.title, publisher: item.publisher, url: item.url, publishedAt: item.publishedAt });
     }
+    if (parsed.sources.length === 0) throw new Error("Research returned no sources from the current feed packet");
     return parsed;
   } catch (err) {
     console.error("[RESEARCH] OpenAI error", err);

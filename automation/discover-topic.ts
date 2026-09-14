@@ -41,7 +41,14 @@ export async function discoverTopics(openai: any, dryRun = false) {
         throw new Error("Discovery response was truncated");
       }
       const parsed = parseJsonResponse(raw);
-      return Array.isArray(parsed) ? parsed : parsed.candidates || [];
+      const candidates = Array.isArray(parsed) ? parsed : parsed.candidates || [];
+      return candidates.map((candidate: any) => ({
+        ...candidate,
+        sourceItems: (candidate.sourceItems || [])
+          .map((source: any) => typeof source === "string" ? source : source.url)
+          .map((url: string) => newsItems.find((item) => item.url === url))
+          .filter(Boolean)
+      }));
     } catch (err) {
       if (attempt === 2) {
         console.error("[DISCOVERY] OpenAI error", err);
