@@ -34,6 +34,7 @@ async function main() {
   candidates.sort((a:any,b:any)=> (b.importanceScore||0)*(b.sourceQualityScore||0)*(b.noveltyScore||0) - (a.importanceScore||0)*(a.sourceQualityScore||0)*(a.noveltyScore||0));
   const chosen = candidates[0];
   console.log(`[DISCOVERY] Selected: ${chosen.title || chosen.topic}`);
+  console.log(`[DISCOVERY] Linked current sources: ${chosen.sourceItems?.length || 0}`);
 
   // duplicate protection: check last 60 days
   const recent = history.slice(0,60).map((h:any)=>h.title || h.topic);

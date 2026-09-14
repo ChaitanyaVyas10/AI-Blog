@@ -69,6 +69,13 @@ function normalizeUrl(value: string) {
 }
 
 function selectCurrentSources(candidate: any, newsItems: any[]) {
+  const indexes = Array.isArray(candidate.sourceIndexes) ? candidate.sourceIndexes : [];
+  const indexed = indexes
+    .map((index: unknown) => Number(index))
+    .filter((index: number) => Number.isInteger(index) && index >= 1 && index <= newsItems.length)
+    .map((index: number) => newsItems[index - 1]);
+  if (indexed.length > 0) return indexed;
+
   const requested = (candidate.sourceItems || [])
     .map((source: any) => typeof source === "string" ? source : source?.url)
     .filter(Boolean)
@@ -80,7 +87,7 @@ function selectCurrentSources(candidate: any, newsItems: any[]) {
   const related = newsItems.map((item) => ({
     item,
     score: words.filter((word: string) => item.title.toLowerCase().includes(word)).length
-  })).filter((entry) => entry.score >= 2).sort((a, b) => b.score - a.score).slice(0, 5);
-  return related.map((entry) => entry.item);
+  })).sort((a, b) => b.score - a.score).slice(0, 5);
+  return related.filter((entry) => entry.score > 0).map((entry) => entry.item);
 }
 

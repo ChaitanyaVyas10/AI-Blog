@@ -24,6 +24,7 @@ export async function researchTopic(openai: any, topic: any, dryRun = false) {
 
   try {
     const sourceItems = topic.sourceItems || [];
+    if (sourceItems.length === 0) throw new Error("Selected topic was not linked to a current feed item");
     const resp = await openai.chat.completions.create({
       model: process.env.OPENAI_RESEARCH_MODEL || "gpt-4o-mini",
       messages: [
