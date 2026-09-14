@@ -1,4 +1,5 @@
 import { writerSystem } from "./prompts/writer";
+import { parseJsonResponse } from "./utilities";
 
 export async function writeArticle(openai: any, researchPackage: any, dryRun = false) {
   if (dryRun) {
@@ -26,11 +27,13 @@ export async function writeArticle(openai: any, researchPackage: any, dryRun = f
         { role: "system", content: writerSystem },
         { role: "user", content: `Write an article based strictly on this research package: ${JSON.stringify(researchPackage)}` }
       ],
+      response_format: { type: "json_object" },
       max_tokens: 3000
     });
     const raw = resp.choices?.[0]?.message?.content || resp.choices?.[0]?.text || "";
-    // Expect full markdown with frontmatter
-    return { raw };
+    const parsed = parseJsonResponse(raw);
+    if (!parsed.body || !parsed.frontmatter) throw new Error("Writer returned incomplete structured article");
+    return parsed;
   } catch (err) {
     console.error("[WRITER] OpenAI error", err);
     throw err;

@@ -62,9 +62,11 @@ async function main() {
   const draft = await writeArticle(openai, research, dryRun);
   const review = await editorialReview(openai, draft, research, dryRun);
   if (!review.approved) {
-    console.log(`[EDITOR] Not approved:`, review.issues);
-    return;
+    const issues = JSON.stringify(review.issues || [{ message: "No approval returned" }]);
+    console.error(`[EDITOR] Not approved: ${issues}`);
+    throw new Error(`Editorial review rejected the article: ${issues}`);
   }
+  console.log("[EDITOR] Approved");
 
   const finalArticle = review.revisedArticle || draft;
   const publicationTime = new Date().toISOString();
