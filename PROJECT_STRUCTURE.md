@@ -78,11 +78,11 @@ Pipeline entrypoint. It coordinates discovery, research, writing, editorial revi
 
 ### `automation/discover-topic.ts`
 
-Requests a compact structured list of current candidate topics and selects candidates for ranking. It uses bounded retries and rejects malformed responses.
+Fetches current BBC News and Guardian RSS items, then asks the model to rank only those supplied stories. It uses bounded retries and rejects malformed responses.
 
 ### `automation/research-topic.ts`
 
-Builds a structured research package containing facts, disputed claims, perspectives, unknowns, timelines, statistics, and sources.
+Builds a structured research package from the selected current feed items, containing facts, disputed claims, perspectives, unknowns, timelines, statistics, and sources.
 
 ### `automation/write-article.ts`
 

@@ -1,5 +1,5 @@
 import { topicDiscoverySystem, topicDiscoveryUser } from "./prompts/topic-discovery";
-import { parseJsonResponse } from "./utilities";
+import { fetchNewsItems, parseJsonResponse } from "./utilities";
 
 export async function discoverTopics(openai: any, dryRun = false) {
   // For now this uses the OpenAI chat completion. In dry-run mode we return a few hard-coded candidates.
@@ -19,14 +19,18 @@ export async function discoverTopics(openai: any, dryRun = false) {
     ];
   }
 
-  // Keep discovery compact so the structured response cannot be cut off mid-JSON.
+  const newsItems = await fetchNewsItems();
+  if (newsItems.length < 4) throw new Error("Current news feeds returned too few usable items");
+  const currentNews = newsItems.map((item, index) => `${index + 1}. ${item.title} | ${item.publisher} | ${item.publishedAt || "date unavailable"} | ${item.url}`).join("\n");
+
+  // Keep discovery grounded in current feed items rather than model memory.
   for (let attempt = 1; attempt <= 2; attempt += 1) {
     try {
       const resp = await openai.chat.completions.create({
         model: process.env.OPENAI_RESEARCH_MODEL || "gpt-4o-mini",
         messages: [
           { role: "system", content: topicDiscoverySystem },
-          { role: "user", content: `${topicDiscoveryUser} Return no more than 8 candidates.` }
+          { role: "user", content: `${topicDiscoveryUser} Return no more than 8 candidates. Use only stories represented in this current feed. Include sourceItems as an array of source URLs supporting each candidate.\n\nCURRENT FEED ITEMS:\n${currentNews}` }
         ],
         response_format: { type: "json_object" },
         max_tokens: 1800

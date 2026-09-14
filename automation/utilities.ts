@@ -5,6 +5,45 @@ import slugify from "slugify";
 
 export const TOPIC_HISTORY = path.resolve("data/topic-history.json");
 
+export type NewsItem = {
+  title: string;
+  url: string;
+  publisher: string;
+  publishedAt?: string;
+  summary?: string;
+};
+
+export const NEWS_FEEDS = [
+  { publisher: "BBC News", url: "https://feeds.bbci.co.uk/news/world/rss.xml" },
+  { publisher: "BBC News", url: "https://feeds.bbci.co.uk/news/technology/rss.xml" },
+  { publisher: "The Guardian", url: "https://www.theguardian.com/world/rss" },
+  { publisher: "The Guardian", url: "https://www.theguardian.com/technology/rss" }
+];
+
+export async function fetchNewsItems(): Promise<NewsItem[]> {
+  const items: NewsItem[] = [];
+  for (const feed of NEWS_FEEDS) {
+    try {
+      const response = await fetch(feed.url, { signal: AbortSignal.timeout(12000) });
+      if (!response.ok) continue;
+      const xml = await response.text();
+      for (const item of xml.matchAll(/<item>([\s\S]*?)<\/item>/gi)) {
+        const block = item[1];
+        const read = (tag: string) => {
+          const match = block.match(new RegExp(`<${tag}[^>]*>([\\s\\S]*?)<\\/${tag}>`, "i"));
+          return match?.[1]?.replace(/<!\[CDATA\[|\]\]>/g, "").replace(/<[^>]+>/g, "").trim();
+        };
+        const title = read("title");
+        const url = read("link");
+        if (title && url) items.push({ title, url, publisher: feed.publisher, publishedAt: read("pubDate"), summary: read("description") });
+      }
+    } catch (error) {
+      console.warn(`[NEWS] Feed unavailable: ${feed.url}`);
+    }
+  }
+  return items.slice(0, 40);
+}
+
 export const topicHistorySchema = z.array(z.object({
   date: z.string(),
   title: z.string(),

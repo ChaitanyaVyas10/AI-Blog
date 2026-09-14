@@ -22,19 +22,24 @@ export async function researchTopic(openai: any, topic: any, dryRun = false) {
     };
   }
 
-  // TODO: Implement web search and source extraction using OpenAI web search where supported.
   try {
+    const sourceItems = topic.sourceItems || [];
     const resp = await openai.chat.completions.create({
       model: process.env.OPENAI_RESEARCH_MODEL || "gpt-4o-mini",
       messages: [
         { role: "system", content: researchSystem },
-        { role: "user", content: `Research the following topic and produce a structured JSON research package: ${JSON.stringify(topic)}` }
+        { role: "user", content: `Research the following current topic using only the supplied current source items. Preserve source URLs exactly, do not invent sources, and return at least four usable sources when the source items allow it. Produce a structured JSON research package.\n\nTOPIC:\n${JSON.stringify(topic)}\n\nCURRENT SOURCE ITEMS:\n${JSON.stringify(sourceItems)}` }
       ],
       response_format: { type: "json_object" },
       max_tokens: 2000
     });
     const raw = resp.choices?.[0]?.message?.content || resp.choices?.[0]?.text || "";
     const parsed = parseJsonResponse(raw);
+    const allowedUrls = new Set(sourceItems.map((item: any) => typeof item === "string" ? item : item.url));
+    parsed.sources = (parsed.sources || []).filter((source: any) => source?.url && allowedUrls.has(source.url));
+    if (parsed.sources.length === 0) {
+      throw new Error("Research returned no sources from the current feed packet");
+    }
     return parsed;
   } catch (err) {
     console.error("[RESEARCH] OpenAI error", err);

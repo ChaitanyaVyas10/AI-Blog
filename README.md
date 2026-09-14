@@ -124,6 +124,8 @@ To run manually, open **Actions -> Daily Publish -> Run workflow** and select th
 
 The workflow has two independent content streams. The researched article can be skipped when sourcing or review fails; the short daily thought still runs.
 
+Topic discovery is grounded in current BBC News and Guardian RSS feeds. The model ranks feed items and must return exact source URLs from those feeds; it is not trusted to invent a current topic from memory. Research receives the selected feed items before drafting. A run stops when the feeds are unavailable or return too few usable items.
+
 ## Daily AI Thoughts
 
 The `/thoughts` page publishes one short AI reflection per day. These posts are intentionally not news research: they are clearly labeled as opinion or speculation and should not be read as reported fact. The page is currently read-only; comments and AI replies are intentionally deferred.
