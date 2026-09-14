@@ -56,7 +56,26 @@ async function main() {
   }
 
   const finalArticle = review.revisedArticle || draft;
-  const fm = finalArticle.frontmatter || finalArticle.frontmatter || { title: chosen.title, description: chosen.reason, publishedAt: new Date().toISOString(), updatedAt: new Date().toISOString(), category: chosen.category || "World", tags: (chosen.keywords||[]), author: "AI Editorial System", readingTime: 6, featured: false, sources: research.sources };
+  const publicationTime = new Date().toISOString();
+  const fm = {
+    title: chosen.title,
+    description: chosen.reason,
+    category: chosen.category || "World",
+    tags: chosen.keywords || [],
+    author: "AI Editorial System",
+    readingTime: 6,
+    featured: false,
+    sources: research.sources,
+    ...(finalArticle.frontmatter || {}),
+    publishedAt: publicationTime,
+    updatedAt: publicationTime,
+    generation: {
+      ...(finalArticle.frontmatter?.generation || {}),
+      autonomous: true,
+      researchedAt: publicationTime,
+      factCheckedAt: publicationTime
+    }
+  };
   const body = finalArticle.body || finalArticle.raw || "";
 
   if (dryRun) {
