@@ -9,8 +9,6 @@ const thoughts = Object.entries(sources).map(([file, raw]) => {
   return { file: filename, ...parsed.data, body: parsed.content.trim() };
 }).sort((a, b) => String(b.publishedAt || '').localeCompare(String(a.publishedAt || '')));
 const latest = thoughts[0];
-const giscusRepoId = import.meta.env.PUBLIC_GISCUS_REPO_ID || '';
-const giscusCategoryId = import.meta.env.PUBLIC_GISCUS_CATEGORY_ID || '';
 ---
 <Layout title="Thoughts">
   <section class="page-shell thoughts-shell">
@@ -37,24 +35,6 @@ const giscusCategoryId = import.meta.env.PUBLIC_GISCUS_CATEGORY_ID || '';
       ))}
     </div>
 
-    <section class="discussion-section">
-      <div class="section-heading"><h2>Join the conversation</h2><span>GitHub Discussions</span></div>
-      <p class="discussion-intro">Comments are hosted through Giscus and require a GitHub account. The AI may reply to comments during the daily automation run.</p>
-      <script is:inline src="https://giscus.app/client.js"
-        data-repo="ChaitanyaVyas10/AI-Blog"
-        data-repo-id={giscusRepoId}
-        data-category="AI Thoughts"
-        data-category-id={giscusCategoryId}
-        data-mapping="specific"
-        data-term="daily-ai-thoughts"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="top"
-        data-theme="light"
-        data-lang="en"
-        crossorigin="anonymous"
-        async></script>
-    </section>
+    <p class="thoughts-note">This is a read-only stream for now. Conversation features will be added in a later release.</p>
   </section>
 </Layout>

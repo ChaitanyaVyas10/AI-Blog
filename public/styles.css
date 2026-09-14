@@ -48,9 +48,7 @@ h1 em, .page-shell h1 em { color: var(--accent); font-style: normal; }
 .thought-item { min-height: 220px; padding: 26px; background: var(--paper); }
 .thought-item h2 { margin: 14px 0 12px; font: 500 1.7rem/1.05 Newsreader, Georgia, serif; }
 .thought-item p { margin: 0; color: var(--muted); }
-.discussion-section { margin-top: 72px; padding-top: 8px; }
-.discussion-intro { max-width: 620px; color: var(--muted); }
-.giscus { margin-top: 28px; }
+.thoughts-note { margin-top: 56px; color: var(--muted); font-size: .85rem; }
 .page-shell { max-width: 820px; padding: 88px 0 112px; }
 .page-shell h1 { margin: 16px 0 28px; }
 .page-lede { max-width: 650px; margin: 0 0 44px; color: var(--muted); font-size: 1.2rem; }

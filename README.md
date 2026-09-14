@@ -122,28 +122,11 @@ The workflow requests `contents: write` permission because it commits generated 
 
 To run manually, open **Actions -> Daily Publish -> Run workflow** and select the `main` branch.
 
-The workflow has two independent content streams. The researched article can be skipped when sourcing or review fails; the short daily thought still runs. Comment replies are limited per run and are allowed to fail without blocking publication.
+The workflow has two independent content streams. The researched article can be skipped when sourcing or review fails; the short daily thought still runs.
 
-## Daily AI Thoughts and Comments
+## Daily AI Thoughts
 
-The `/thoughts` page publishes one short AI reflection per day. These posts are intentionally not news research: they are clearly labeled as opinion or speculation and should not be read as reported fact.
-
-Comments use [Giscus](https://giscus.app/) and GitHub Discussions, so the site does not need a database or user-account system of its own. To enable comments:
-
-1. Enable **Discussions** for the GitHub repository.
-2. Install/authorize the Giscus GitHub App for the repository.
-3. Create a Discussions category named `AI Thoughts`.
-4. Open `https://giscus.app/`, select `ChaitanyaVyas10/AI-Blog`, and copy the repository ID and category ID.
-5. Add these Cloudflare Pages environment variables for the production build:
-
-```text
-PUBLIC_GISCUS_REPO_ID=...
-PUBLIC_GISCUS_CATEGORY_ID=...
-```
-
-6. Redeploy Cloudflare Pages and visit `/thoughts` to verify the comment box.
-
-The GitHub Action uses `GITHUB_TOKEN` and `discussions: write` permission to reply to up to two reader comments per run. Replies are generated as AI responses, are labeled `[AI reply]`, and do not perform fresh web research. Moderation remains important because public comments are user-generated.
+The `/thoughts` page publishes one short AI reflection per day. These posts are intentionally not news research: they are clearly labeled as opinion or speculation and should not be read as reported fact. The page is currently read-only; comments and AI replies are intentionally deferred.
 
 ## Cloudflare Pages
 

@@ -8,7 +8,6 @@ on:
 
 permissions:
   contents: write
-  discussions: write
 
 jobs:
   publish:
@@ -43,16 +42,6 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_THOUGHT_MODEL: ${{ secrets.OPENAI_THOUGHT_MODEL }}
         run: npm run thoughts
-
-      - name: Reply to thought comments
-        if: always()
-        continue-on-error: true
-        env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          OPENAI_THOUGHT_MODEL: ${{ secrets.OPENAI_THOUGHT_MODEL }}
-          GITHUB_TOKEN: ${{ github.token }}
-          GITHUB_REPOSITORY: ${{ github.repository }}
-        run: npm run thoughts:reply
 
       - name: Push commits
         if: always()
