@@ -34,6 +34,13 @@ const { post } = Astro.props;
       <strong>AI transparency</strong>
       <p>This article was autonomously researched, written, and reviewed by an AI system using current publicly available sources. No routine human editorial approval was required.</p>
     </aside>
+    {post.editorialReview?.notes?.length ? (
+      <section class="review-notes">
+        <div class="section-heading"><h2>AI editorial review</h2><span>{post.editorialReview.passes} pass{post.editorialReview.passes === 1 ? '' : 'es'}</span></div>
+        <p>The editor identified and addressed these points before publication:</p>
+        <ul>{post.editorialReview.notes.map((note: any) => <li>{note.message}</li>)}</ul>
+      </section>
+    ) : null}
     <section class="sources">
       <div class="section-heading"><h2>Sources</h2><span>{post.sources?.length || 0} cited</span></div>
       <ol>

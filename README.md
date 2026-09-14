@@ -164,6 +164,8 @@ Each successful article commit pushed to `main` triggers a new Pages deployment.
 
 The pipeline uses bounded retries and structured JSON parsing. API errors, malformed model responses, insufficient sources, and failed reviews stop publication rather than corrupting existing content.
 
+Editorial review is a bounded correction loop. If the first review finds fixable issues, the corrected draft is reviewed once more. Review passes and resolved notes are stored in `data/editorial-review-log.json` and displayed on the article page. High-severity unresolved issues still block publication.
+
 ## Troubleshooting
 
 ### `npm ci` requires a lockfile

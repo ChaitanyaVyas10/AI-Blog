@@ -5,6 +5,7 @@ import simpleGit from "simple-git";
 import { generateSlug, readTopicHistory, writeTopicHistory } from "./utilities";
 
 const POSTS_DIR = path.resolve("content/posts");
+const REVIEW_LOG = path.resolve("data/editorial-review-log.json");
 
 export async function publishArticle(frontmatter: any, body: string, commit = true) {
   fs.mkdirSync(POSTS_DIR, { recursive: true });
@@ -20,11 +21,14 @@ export async function publishArticle(frontmatter: any, body: string, commit = tr
   // keep 120 entries
   const pruned = history.slice(0, 120);
   writeTopicHistory(pruned);
+  const reviewLog = fs.existsSync(REVIEW_LOG) ? JSON.parse(fs.readFileSync(REVIEW_LOG, "utf-8")) : [];
+  reviewLog.unshift({ date, title: frontmatter.title, slug, review: frontmatter.editorialReview || null });
+  fs.writeFileSync(REVIEW_LOG, JSON.stringify(reviewLog.slice(0, 120), null, 2), "utf-8");
 
   if (commit) {
     const git = simpleGit();
     try {
-      await git.add([filename, "data/topic-history.json"]);
+      await git.add([filename, "data/topic-history.json", REVIEW_LOG]);
       await git.commit(`publish: daily article ${date}`);
       await git.push();
       console.log(`[PUBLISH] committed and pushed ${filename}`);

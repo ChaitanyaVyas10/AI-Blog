@@ -60,15 +60,29 @@ async function main() {
   }
 
   const draft = await writeArticle(openai, research, dryRun);
-  const review = await editorialReview(openai, draft, research, dryRun);
-  if (!review.approved) {
-    const issues = JSON.stringify(review.issues || [{ message: "No approval returned" }]);
-    console.error(`[EDITOR] Not approved: ${issues}`);
+  const reviewHistory: any[] = [];
+  let reviewedArticle = draft;
+  let review: any = null;
+  for (let pass = 1; pass <= 2; pass += 1) {
+    review = await editorialReview(openai, reviewedArticle, research, dryRun);
+    reviewHistory.push({ pass, approved: review.approved, issues: review.issues || [] });
+    if (review.revisedArticle) reviewedArticle = review.revisedArticle;
+    if (review.approved) break;
+    if (!review.revisedArticle || pass === 2) break;
+    console.warn(`[EDITOR] Revision required on pass ${pass}; reviewing corrected draft`);
+    reviewedArticle = review.revisedArticle;
+  }
+  const unresolvedIssues = review?.issues || [];
+  const highSeverity = unresolvedIssues.some((issue: any) => issue.severity === "high");
+  if (!review?.approved && highSeverity) {
+    const issues = JSON.stringify(unresolvedIssues);
+    console.error(`[EDITOR] High-severity issues remain: ${issues}`);
     throw new Error(`Editorial review rejected the article: ${issues}`);
   }
-  console.log("[EDITOR] Approved");
+  if (!review?.approved) console.warn("[EDITOR] Publishing corrected draft with no high-severity issues");
+  else console.log("[EDITOR] Approved");
 
-  const finalArticle = review.revisedArticle || draft;
+  const finalArticle = reviewedArticle;
   const publicationTime = new Date().toISOString();
   const fm = {
     title: chosen.title,
@@ -87,6 +101,11 @@ async function main() {
       autonomous: true,
       researchedAt: publicationTime,
       factCheckedAt: publicationTime
+    },
+    editorialReview: {
+      passes: reviewHistory.length,
+      approved: Boolean(review?.approved),
+      notes: reviewHistory.flatMap((entry) => entry.issues)
     }
   };
   const body = finalArticle.body || finalArticle.raw || "";

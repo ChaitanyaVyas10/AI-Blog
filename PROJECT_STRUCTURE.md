@@ -70,6 +70,10 @@ Published Markdown files are the production content source. The repository no lo
 
 Recent publication history used to reduce duplicate topic selection. The automation keeps recent entries so the model does not repeatedly choose the same story.
 
+### `data/editorial-review-log.json`
+
+Compact publication history for editorial review passes, including the article title, approval state, and review notes that were addressed.
+
 ## Automation
 
 ### `automation/run-daily.ts`
@@ -90,7 +94,7 @@ Creates the article draft from the research package. The writer is instructed no
 
 ### `automation/editorial-review.ts`
 
-Runs the separate skeptical editorial pass. It checks support, attribution, dates, framing, uncertainty, source matching, and false balance.
+Runs the separate skeptical editorial pass. It checks support, attribution, dates, framing, uncertainty, source matching, and false balance. The daily runner allows one bounded correction pass before publication.
 
 ### `automation/publish-article.ts`
 
