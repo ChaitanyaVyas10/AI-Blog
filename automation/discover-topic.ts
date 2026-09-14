@@ -44,10 +44,7 @@ export async function discoverTopics(openai: any, dryRun = false) {
       const candidates = Array.isArray(parsed) ? parsed : parsed.candidates || [];
       return candidates.map((candidate: any) => ({
         ...candidate,
-        sourceItems: (candidate.sourceItems || [])
-          .map((source: any) => typeof source === "string" ? source : source.url)
-          .map((url: string) => newsItems.find((item) => item.url === url))
-          .filter(Boolean)
+        sourceItems: selectCurrentSources(candidate, newsItems)
       }));
     } catch (err) {
       if (attempt === 2) {
@@ -58,5 +55,32 @@ export async function discoverTopics(openai: any, dryRun = false) {
     }
   }
   throw new Error("Discovery failed without a response");
+}
+
+function normalizeUrl(value: string) {
+  try {
+    const url = new URL(value);
+    url.search = "";
+    url.hash = "";
+    return url.toString().replace(/\/$/, "");
+  } catch {
+    return value.trim().replace(/\/$/, "");
+  }
+}
+
+function selectCurrentSources(candidate: any, newsItems: any[]) {
+  const requested = (candidate.sourceItems || [])
+    .map((source: any) => typeof source === "string" ? source : source?.url)
+    .filter(Boolean)
+    .map(normalizeUrl);
+  const exact = newsItems.filter((item) => requested.includes(normalizeUrl(item.url)));
+  if (exact.length > 0) return exact;
+
+  const words = `${candidate.title || ""} ${candidate.topic || ""}`.toLowerCase().split(/[^a-z0-9]+/).filter((word: string) => word.length > 3);
+  const related = newsItems.map((item) => ({
+    item,
+    score: words.filter((word: string) => item.title.toLowerCase().includes(word)).length
+  })).filter((entry) => entry.score >= 2).sort((a, b) => b.score - a.score).slice(0, 5);
+  return related.map((entry) => entry.item);
 }
 
