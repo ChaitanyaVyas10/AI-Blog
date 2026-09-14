@@ -39,3 +39,17 @@ export function estimateReadingTime(text: string) {
   const words = text.split(/\s+/).filter(Boolean).length;
   return Math.max(1, Math.round(words / 200));
 }
+
+export function parseJsonResponse(raw: string) {
+  const trimmed = raw.trim();
+  const fenced = trimmed.match(/^```(?:json)?\s*([\s\S]*?)\s*```$/i);
+  const candidate = fenced ? fenced[1].trim() : trimmed;
+  try {
+    return JSON.parse(candidate);
+  } catch {
+    const start = candidate.search(/[\[{]/);
+    const end = Math.max(candidate.lastIndexOf("]"), candidate.lastIndexOf("}"));
+    if (start >= 0 && end > start) return JSON.parse(candidate.slice(start, end + 1));
+    throw new Error("Model response did not contain valid JSON");
+  }
+}

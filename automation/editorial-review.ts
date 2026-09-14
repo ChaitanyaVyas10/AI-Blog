@@ -1,4 +1,5 @@
 import { editorSystem } from "./prompts/editor";
+import { parseJsonResponse } from "./utilities";
 
 export async function editorialReview(openai: any, draft: any, researchPackage: any, dryRun = false) {
   if (dryRun) {
@@ -16,7 +17,7 @@ export async function editorialReview(openai: any, draft: any, researchPackage: 
     });
     const raw = resp.choices?.[0]?.message?.content || resp.choices?.[0]?.text || "";
     try {
-      return JSON.parse(raw);
+      return parseJsonResponse(raw);
     } catch (e) {
       return { approved: false, issues: [{ message: "Editor output not valid JSON" }], revisedArticle: draft };
     }

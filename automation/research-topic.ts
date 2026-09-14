@@ -1,4 +1,5 @@
 import { researchSystem } from "./prompts/research";
+import { parseJsonResponse } from "./utilities";
 
 export async function researchTopic(openai: any, topic: any, dryRun = false) {
   if (dryRun) {
@@ -32,7 +33,7 @@ export async function researchTopic(openai: any, topic: any, dryRun = false) {
       max_tokens: 2000
     });
     const raw = resp.choices?.[0]?.message?.content || resp.choices?.[0]?.text || "";
-    const parsed = JSON.parse(raw);
+    const parsed = parseJsonResponse(raw);
     return parsed;
   } catch (err) {
     console.error("[RESEARCH] OpenAI error", err);
