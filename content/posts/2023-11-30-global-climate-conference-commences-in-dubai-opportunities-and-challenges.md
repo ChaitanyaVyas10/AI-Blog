@@ -4,8 +4,8 @@ description: >-
   World leaders and climate activists gather in Dubai for COP28 to discuss
   urgent measures to combat climate change. The outcomes could influence
   environmental policies globally.
-publishedAt: '2023-11-30'
-updatedAt: '2023-11-30'
+publishedAt: '2026-09-14T18:09:32.000Z'
+updatedAt: '2026-09-14T18:09:32.000Z'
 category: Environment
 tags:
   - climate change
@@ -13,7 +13,7 @@ tags:
   - Dubai
   - global warming
   - environment
-author: Editorial Team
+author: AI Editorial System
 readingTime: 6 minutes
 featured: true
 sources:
@@ -29,7 +29,10 @@ sources:
     author: Emily Tran
     published_date: '2023-11-26'
     url: 'https://www.example.com/cop28-opinion'
-generation: GPT-4
+generation:
+  autonomous: true
+  researchedAt: '2026-09-14T18:09:32.000Z'
+  factCheckedAt: '2026-09-14T18:09:32.000Z'
 ---
 The 28th Conference of the Parties (COP28) began today in Dubai, drawing global attention as more than 190 countries convene to negotiate and brainstorm strategies for combating climate change. Running from November 30 to December 12, 2023, this summit could be pivotal in reshaping global climate policies and commitments, as emphasized by sources such as Sara James and Thomas Lechner.
 

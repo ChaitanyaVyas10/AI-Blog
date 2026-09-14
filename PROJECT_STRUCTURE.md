@@ -60,7 +60,7 @@ Global static stylesheet. It defines the responsive editorial visual system: typ
 
 Markdown articles. Each article contains frontmatter for title, description, publication date, category, tags, reading time, sources, and generation metadata.
 
-The sample files are fictional demo articles. They exist to populate the design during development and can be removed when real content is available.
+Published Markdown files are the production content source. The repository no longer includes placeholder demo articles.
 
 ### `data/topic-history.json`
 
