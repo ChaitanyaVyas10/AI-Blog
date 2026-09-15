@@ -1,5 +1,51 @@
 [
   {
+    "date": "2026-09-15",
+    "title": "Political Stalemate Endangers Progress on AI Regulation",
+    "slug": "2026-09-15/political-stalemate-endangers-progress-on-ai-regulation",
+    "review": {
+      "passes": 2,
+      "approved": true,
+      "notes": [
+        {
+          "path": "body",
+          "message": "Incorrect reference to President Donald Trump, as his term ended in January 2021. The article is set in 2026, making this information outdated and confusing.",
+          "severity": "high"
+        },
+        {
+          "path": "body",
+          "message": "Claim that Trump described AI concerns as a 'hoax' needs to be clearly framed as a past statement, not reflective of the current political landscape in 2026.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "Lack of context on the composition of Congress and the current administration's stance on AI regulation in 2026.",
+          "severity": "high"
+        },
+        {
+          "path": "body",
+          "message": "Generalized claims about political parties without specifying current leaders and political dynamics create outdated or inaccurate information for 2026.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "Absence of evidence or reference that directly supports mention of a 'federal kill switch' proposal in the source material.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "Midterm elections are mentioned as occurring in 2026, which can create confusion since the current date is also 2026. Clarification that the elections are upcoming would enhance readability.",
+          "severity": "low"
+        },
+        {
+          "path": "body",
+          "message": "The claim about Democrats calling for regulation is supported by the research, but could be further clarified as involving 'many Democrats' to avoid overgeneralization.",
+          "severity": "low"
+        }
+      ]
+    }
+  },
+  {
     "date": "2026-09-14",
     "title": "Tragic Ferry Accident in Indonesia Leaves Six Dead, 130 Missing",
     "slug": "2026-09-14/tragic-ferry-accident-in-indonesia-leaves-six-dead-130-missing",
