@@ -75,9 +75,8 @@ async function main() {
   const unresolvedIssues = review?.issues || [];
   const highSeverity = unresolvedIssues.some((issue: any) => issue.severity === "high");
   if (!review?.approved && highSeverity) {
-    const issues = JSON.stringify(unresolvedIssues);
-    console.error(`[EDITOR] High-severity issues remain: ${issues}`);
-    throw new Error(`Editorial review rejected the article: ${issues}`);
+    console.warn("[EDITOR] High-severity issues remain; publishing a limited source brief instead of the rejected analysis");
+    reviewedArticle = createSourceBrief(chosen, research);
   }
   if (!review?.approved) console.warn("[EDITOR] Publishing corrected draft with no high-severity issues");
   else console.log("[EDITOR] Approved");
@@ -118,6 +117,36 @@ async function main() {
 
   const pub = await publishArticle(fm, body, true);
   console.log(`[PUBLISH] Done: ${pub.slug}`);
+}
+
+function createSourceBrief(topic: any, research: any) {
+  const facts = Array.isArray(research.facts) ? research.facts : [];
+  const unknowns = Array.isArray(research.unknowns) ? research.unknowns : [];
+  const sources = Array.isArray(research.sources) ? research.sources : [];
+  const lines = [
+    `## What is reported`,
+    facts.length ? facts.map((fact: string) => `- ${fact}`).join("\n") : "Current source material is limited, so this brief does not assert additional facts.",
+    `\n## What remains uncertain`,
+    unknowns.length ? unknowns.map((item: string) => `- ${item}`).join("\n") : "- The available reports do not establish all relevant details.",
+    `\n## Assessment`,
+    "This is a limited source brief, not a full analysis. It intentionally omits claims that could not be directly supported by the current source packet.",
+    `\n## Sources`,
+    sources.map((source: any) => `- [${source.title || source.url}](${source.url})`).join("\n")
+  ];
+  return {
+    frontmatter: {
+      title: topic.title,
+      description: "A limited source brief based only on the current reporting packet.",
+      category: topic.category || "World",
+      tags: topic.keywords || [],
+      author: "AI Editorial System",
+      readingTime: 2,
+      featured: false,
+      sources,
+      fallbackBrief: true
+    },
+    body: lines.join("\n")
+  };
 }
 
 main().catch(err=>{ console.error(err); process.exit(1); });

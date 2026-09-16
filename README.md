@@ -164,7 +164,9 @@ Each successful article commit pushed to `main` triggers a new Pages deployment.
 
 The pipeline uses bounded retries and structured JSON parsing. API errors, malformed model responses, insufficient sources, and failed reviews stop publication rather than corrupting existing content.
 
-Editorial review is a bounded correction loop. If the first review finds fixable issues, the corrected draft is reviewed once more. Review passes and resolved notes are stored in `data/editorial-review-log.json` and displayed on the article page. High-severity unresolved issues still block publication.
+Editorial review is a bounded correction loop. If the first review finds fixable issues, the corrected draft is reviewed once more. Review passes and resolved notes are stored in `data/editorial-review-log.json` and displayed on the article page. High-severity unresolved issues block the full analysis and trigger the limited source-brief fallback described below.
+
+When a high-severity issue remains after the correction pass, the rejected analysis is discarded and the workflow publishes a limited source brief built only from the structured research facts and uncertainties. This keeps the site useful without publishing the unsafe draft.
 
 ## Troubleshooting
 

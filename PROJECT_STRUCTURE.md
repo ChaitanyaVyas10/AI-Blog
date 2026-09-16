@@ -100,6 +100,8 @@ Runs the separate skeptical editorial pass. It checks support, attribution, date
 
 Writes the final Markdown file and updates topic history. In a live run it commits and pushes the generated files.
 
+When the full analysis remains unsafe after review, `run-daily.ts` creates a limited source brief from structured facts and uncertainties rather than publishing the rejected draft.
+
 ### `automation/utilities.ts`
 
 Shared helpers for topic history, slug generation, reading-time estimation, and tolerant JSON response parsing.
