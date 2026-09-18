@@ -1,5 +1,41 @@
 [
   {
+    "date": "2026-09-18",
+    "title": "Rising Concerns Over the Deaths of Illegal Miners in Nigerian Custody",
+    "slug": "2026-09-18/rising-concerns-over-the-deaths-of-illegal-miners-in-nigerian-custody",
+    "review": {
+      "passes": 2,
+      "approved": true,
+      "notes": [
+        {
+          "path": "body",
+          "message": "The article claims that deaths are due to a disease outbreak without medical confirmation. This needs clarification and context.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The relatives' claims require more support. It is stated, but not verified whether the individuals were healthy before detention.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The investigation's outcome is not available, making any assertions about reforms speculative.",
+          "severity": "medium"
+        },
+        {
+          "path": "frontmatter.sources",
+          "message": "Only one source is cited, which limits the perspectives and depth of the article.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The article effectively presents claims, counterclaims, and contextual information while avoiding unsupported claims or overconfident assertions.",
+          "severity": "low"
+        }
+      ]
+    }
+  },
+  {
     "date": "2026-09-17",
     "title": "US interest rates raised for first time in three years",
     "slug": "2026-09-17/us-interest-rates-raised-for-first-time-in-three-years",
