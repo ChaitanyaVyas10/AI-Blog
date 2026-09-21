@@ -1,5 +1,30 @@
 [
   {
+    "date": "2026-09-21",
+    "title": "Yemen's Ongoing Conflict Sparks Mass Displacement to Djibouti",
+    "slug": "2026-09-21/yemens-ongoing-conflict-sparks-mass-displacement-to-djibouti",
+    "review": {
+      "passes": 1,
+      "approved": true,
+      "notes": [
+        {
+          "path": [
+            "body"
+          ],
+          "message": "The term 'recent surge' should be specified with a time frame or exact numbers for clarity.",
+          "severity": "medium"
+        },
+        {
+          "path": [
+            "body"
+          ],
+          "message": "Explicitly attribute the refugee experiences to the original reporting by BBC News for accuracy.",
+          "severity": "low"
+        }
+      ]
+    }
+  },
+  {
     "date": "2026-09-20",
     "title": "Largest attack on Moscow sees Ukraine fire hundreds of drones, mayor says",
     "slug": "2026-09-20/largest-attack-on-moscow-sees-ukraine-fire-hundreds-of-drones-mayor-says",
