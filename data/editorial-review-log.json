@@ -1,5 +1,66 @@
 [
   {
+    "date": "2026-09-23",
+    "title": "Rising Violence Against Women in Gaza: A Growing Humanitarian Concern",
+    "slug": "2026-09-23/rising-violence-against-women-in-gaza-a-growing-humanitarian-concern",
+    "review": {
+      "passes": 2,
+      "approved": false,
+      "notes": [
+        {
+          "path": "frontmatter.description",
+          "message": "The phrase 'underscoring a severe humanitarian crisis' implies a certainty that requires more context or evidence within the article to support the use of 'severe' definitively.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The inclusion of specific percentages like '123%' should be accompanied by more details on data sources or methods used to calculate these figures to ensure clarity and accuracy.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The article states that the conflict began in 2023 without providing contextual background or evidence for this assertion.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The timeline and context surrounding increased violence and early marriages lack detailed explanation or data, making the causal links less clear and potentially misleading.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The article refers to the future impacts as 'unknown' but suggests severe health and social implications without referencing studies or evidence that explore these outcomes.",
+          "severity": "medium"
+        },
+        {
+          "path": "title",
+          "message": "The title suggests a deepening crisis without clarifying what specific conditions have led to this situation.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The article mentions 'a severe escalation in cases of early and forced marriages' but does not provide specific statistics from the research to support this claim.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The report mentions a surge in violence but does not clarify which types of violence aside from early marriages have increased.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "A claim is made about changes beginning in 2023 due to the conflict between Israel and Hamas. This needs more context or evidence as the research does not offer specific details on this timeline.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The article lacks a clear conclusion summarizing the findings and suggesting potential solutions or responses.",
+          "severity": "low"
+        }
+      ]
+    }
+  },
+  {
     "date": "2026-09-22",
     "title": "Developing El Niño becomes strongest on record weeks before expected peak",
     "slug": "2026-09-22/developing-el-nino-becomes-strongest-on-record-weeks-before-expected-peak",
