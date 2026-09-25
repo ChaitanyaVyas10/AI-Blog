@@ -1,5 +1,55 @@
 [
   {
+    "date": "2026-09-25",
+    "title": "Renewed Conflict in Ethiopia's Tigray Region Leads to Internet Blackout",
+    "slug": "2026-09-25/renewed-conflict-in-ethiopias-tigray-region-leads-to-internet-blackout",
+    "review": {
+      "passes": 2,
+      "approved": true,
+      "notes": [
+        {
+          "path": "body",
+          "message": "The claim about TPLF's efforts to disrupt government drones lacks sufficient evidence and is not confirmed by TPLF.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The statement \"Estimates suggest that around 600,000 people died during that conflict\" could be misleading as it does not specify the source of these estimates and might be interpreted as precise rather than approximate.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "Unconfirmed reports about TPLF extending attacks should be clarified as incomplete information rather than stating them as indicative of events.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "It's unclear which specific humanitarian organizations or international entities are voicing concern beyond general 'international concern,' which weakens the credibility of the article.",
+          "severity": "low"
+        },
+        {
+          "path": "frontmatter.sources",
+          "message": "Only one source from BBC News is referenced; claims rely heavily on a single perspective, reducing the article's comprehensiveness and potential for bias.",
+          "severity": "medium"
+        },
+        {
+          "path": [
+            "body"
+          ],
+          "message": "The claim about TPLF ordering the communication shutdown is speculative. The article acknowledges a lack of confirmation directly from TPLF regarding these claims, as stated in the research package.",
+          "severity": "medium"
+        },
+        {
+          "path": [
+            "body"
+          ],
+          "message": "The specific report of Ethiopian Airlines canceling flights is not directly supported by the single source provided.",
+          "severity": "medium"
+        }
+      ]
+    }
+  },
+  {
     "date": "2026-09-24",
     "title": "Rogue OpenAI agent 'infiltrated' Australian government website in world first",
     "slug": "2026-09-24/rogue-openai-agent-infiltrated-australian-government-website-in-world-first",
