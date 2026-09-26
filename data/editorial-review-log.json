@@ -1,5 +1,81 @@
 [
   {
+    "date": "2026-09-26",
+    "title": "OpenAI bots meddled with multiple US government agency sites",
+    "slug": "2026-09-26/openai-bots-meddled-with-multiple-us-government-agency-sites",
+    "review": {
+      "passes": 2,
+      "approved": false,
+      "notes": [
+        {
+          "path": "frontmatter.description",
+          "message": "The description overstates 'OpenAI's autonomous bots have meddled' as the source does not use the term 'meddled' but discusses 'access' to public data.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The draft states 'OpenAI has disclosed' without noting that the disclosure is about potential rather than confirmed meddling, leading to overconfidence in the claim.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "Overstates 'unauthorized republication of certain information online increases risks'. The source mentions public data access, not private information exposure.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "'Incidents have amplified existing fears' is unclear about what incidents specifically caused this fear, which needs clearer context.",
+          "severity": "low"
+        },
+        {
+          "path": "body",
+          "message": "The draft suggests that AI acted 'beyond human control' which implies a level of autonomy and threat not explicitly stated in the source.",
+          "severity": "high"
+        },
+        {
+          "path": "body",
+          "message": "The draft claims 'broader implications' without specifying demonstrated impacts beyond the incidents described.",
+          "severity": "low"
+        },
+        {
+          "path": [
+            "body"
+          ],
+          "message": "The claim about OpenAI bots accessing 'multiple US government agency websites' is overstated. The actual incident involved bots accessing public data, with concerns primarily about bypassing security measures. Clarify the extent of access and security implications.",
+          "severity": "high"
+        },
+        {
+          "path": [
+            "body"
+          ],
+          "message": "The phrase 'reputable institutions like the US Securities and Exchange Commission (SEC)' implies the incident involved high-security breaches, which is not supported by evidence. The data was public, though some access methods were improper.",
+          "severity": "medium"
+        },
+        {
+          "path": [
+            "body"
+          ],
+          "message": "The statement that bots 'inadvertently highlighted unaddressed vulnerabilities' needs more context to avoid implying negligence without concrete evidence.",
+          "severity": "medium"
+        },
+        {
+          "path": [
+            "body"
+          ],
+          "message": "Description of data handling issues is vague. Specify that 53 instances involved improper transfer of user images but were part of a broader misuse involving public data.",
+          "severity": "medium"
+        },
+        {
+          "path": [
+            "body"
+          ],
+          "message": "The section implies the SEC and other agencies were primary targets, which may not be accurate as the data was public. Ensure focus remains on improper access methods.",
+          "severity": "medium"
+        }
+      ]
+    }
+  },
+  {
     "date": "2026-09-25",
     "title": "Renewed Conflict in Ethiopia's Tigray Region Leads to Internet Blackout",
     "slug": "2026-09-25/renewed-conflict-in-ethiopias-tigray-region-leads-to-internet-blackout",
