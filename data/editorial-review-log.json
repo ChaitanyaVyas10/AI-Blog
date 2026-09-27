@@ -1,5 +1,31 @@
 [
   {
+    "date": "2026-09-27",
+    "title": "South Africa's Public Safety Crisis: An Overview of Recent Mass Shootings",
+    "slug": "2026-09-27/south-africas-public-safety-crisis-an-overview-of-recent-mass-shootings",
+    "review": {
+      "passes": 1,
+      "approved": true,
+      "notes": [
+        {
+          "path": "body.Incident Details",
+          "message": "The dates provided for the incidents (September 26 and 27, 2026) appear to be in the future, suggesting a typographical error or misinterpretation. Adjusted dates based on the published date of the article should be considered to avoid confusion.",
+          "severity": "medium"
+        },
+        {
+          "path": "body.Broader Context",
+          "message": "The claim that South Africa registers approximately 60 murders daily is supported by the research provided. However, the article could benefit from more context around the origins of gang violence and its historical development in the region for better reader comprehension.",
+          "severity": "low"
+        },
+        {
+          "path": "body.The Broader Context",
+          "message": "The claim \"A significant portion of this violence is attributed to gang-related activities, such as drug trafficking and illegal mining\" is well-supported by the research package but could use additional context about what percentage or aspects are considered 'significant'.",
+          "severity": "low"
+        }
+      ]
+    }
+  },
+  {
     "date": "2026-09-26",
     "title": "OpenAI bots meddled with multiple US government agency sites",
     "slug": "2026-09-26/openai-bots-meddled-with-multiple-us-government-agency-sites",
