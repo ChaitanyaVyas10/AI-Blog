@@ -1,5 +1,57 @@
 [
   {
+    "date": "2026-09-28",
+    "title": "Inside Yemen's front-line city as Houthis battle for control",
+    "slug": "2026-09-28/inside-yemens-front-line-city-as-houthis-battle-for-control",
+    "review": {
+      "passes": 2,
+      "approved": false,
+      "notes": [
+        {
+          "path": "body",
+          "message": "The article inaccurately provides a future date, 'September 10, 2026', for the seizure of Mokha by the Houthis, which is inconsistent with the source and current timeline.",
+          "severity": "high"
+        },
+        {
+          "path": "body",
+          "message": "The article mentions 'rare insights provided by frontline reports' without specifying what these insights are, which lacks clarity and context.",
+          "severity": "medium"
+        },
+        {
+          "path": "frontmatter.sources",
+          "message": "The draft lists only one source, which limits the breadth and depth of perspectives.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "It presents Iran's alleged involvement as unresolved, whereas it is a point of contention, supported by some actors and denied by others. This needs to be presented with more nuance to avoid false balance.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The description of 'a full accounting of civilian casualties' is overly ambitious given the acknowledged unknowns.",
+          "severity": "medium"
+        },
+        {
+          "path": [
+            "body",
+            "Escalating Tensions and Military Movements"
+          ],
+          "message": "The draft mentions that the Houthis captured Mokha in September 2026, but the research package confirms this as happening on September 10, 2026. While technically correct, specifying the exact date would enhance accuracy.",
+          "severity": "low"
+        },
+        {
+          "path": [
+            "body",
+            "Escalating Tensions and Military Movements"
+          ],
+          "message": "The claim about Iran supplying weapons to the Houthis is heavily debated and lacks presentation of varying perspectives. A balanced view acknowledging the competing claims and context is necessary.",
+          "severity": "high"
+        }
+      ]
+    }
+  },
+  {
     "date": "2026-09-27",
     "title": "South Africa's Public Safety Crisis: An Overview of Recent Mass Shootings",
     "slug": "2026-09-27/south-africas-public-safety-crisis-an-overview-of-recent-mass-shootings",
