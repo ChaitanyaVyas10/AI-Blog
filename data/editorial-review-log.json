@@ -1,5 +1,56 @@
 [
   {
+    "date": "2026-09-30",
+    "title": "Russia launches largest attack on Ukraine energy infrastructure since spring",
+    "slug": "2026-09-30/russia-launches-largest-attack-on-ukraine-energy-infrastructure-since-spring",
+    "review": {
+      "passes": 2,
+      "approved": false,
+      "notes": [
+        {
+          "path": "body",
+          "message": "The article incorrectly states the attack happened in 2026, which is in the future. The timeline needs clarification and correction for accuracy.",
+          "severity": "high"
+        },
+        {
+          "path": "body",
+          "message": "There is an exaggerated claim of \"380 threats intercepted\" without context; it needs clarification on what constitutes a 'threat' and how interceptions were measured.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The article mentions Russia seizing 20% of Ukrainian territory but lacks sufficient context or supporting information, as this is a significant statement.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The article claims this is the most significant attack since early 2022; however, the research states it's the largest since spring 2026.",
+          "severity": "high"
+        },
+        {
+          "path": "body",
+          "message": "The article lacks direct support for claims about 'precarious humanitarian situation' and potential shifts in tactics.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The phrase 'Ukraine's allegations are supported by the extensive targeting of civilian regions' is presented as a conclusion without sufficient evidence.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The article says 11 regions were affected, but does not list all; the source material provides specific regions.",
+          "severity": "low"
+        },
+        {
+          "path": "frontmatter.publishedAt",
+          "message": "The article references a publish date as in the future (30 Sep 2026), which is not consistent with a presently written article.",
+          "severity": "high"
+        }
+      ]
+    }
+  },
+  {
     "date": "2026-09-29",
     "title": "Estonia blames Russia for arson at defence company supplying Ukraine",
     "slug": "2026-09-29/estonia-blames-russia-for-arson-at-defence-company-supplying-ukraine",
