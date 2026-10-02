@@ -1,5 +1,60 @@
 [
   {
+    "date": "2026-10-02",
+    "title": "Kyiv Endures Intensified Attacks Amid Escalating Conflict",
+    "slug": "2026-10-02/kyiv-endures-intensified-attacks-amid-escalating-conflict",
+    "review": {
+      "passes": 2,
+      "approved": false,
+      "notes": [
+        {
+          "path": "body",
+          "message": "The date in the draft (\"02 Oct 2026\") is incoherent with the publication context, leading to potential confusion about the timeline; it should be corrected to reflect the current year.",
+          "severity": "high"
+        },
+        {
+          "path": "body",
+          "message": "The claim of 'intensified' strikes lacks specific timing and recent context, which can lead to misunderstanding of the escalation timeline.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The article should clearly state the source and date of the information used to describe the impacts or claims made by the officials for better credibility.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "Conclusion lacks mention of any humanitarian international responses or support, which provides important context in international conflicts.",
+          "severity": "medium"
+        },
+        {
+          "path": [
+            "body",
+            "Current Situation"
+          ],
+          "message": "The article lacks specific evidence and more detailed context on how the described attacks have affected everyday life, as only one direct casualty is mentioned but the broader impact is implied to be severe.",
+          "severity": "medium"
+        },
+        {
+          "path": [
+            "body",
+            "Differing Perspectives"
+          ],
+          "message": "The section should incorporate more balanced coverage by including more direct quotes or at least paraphrased official statements from both sides to avoid appearing speculative.",
+          "severity": "medium"
+        },
+        {
+          "path": [
+            "body",
+            "Sources"
+          ],
+          "message": "The draft implies reliance on only one BBC article, and while the quality of the source is high, more diverse sources would strengthen the accuracy and reliability of the report.",
+          "severity": "medium"
+        }
+      ]
+    }
+  },
+  {
     "date": "2026-10-01",
     "title": "Tennessee halts executions after Christa Pike survives two lethal injection attempts",
     "slug": "2026-10-01/tennessee-halts-executions-after-christa-pike-survives-two-lethal-injection-attempts",
