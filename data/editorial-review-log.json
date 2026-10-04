@@ -1,5 +1,26 @@
 [
   {
+    "date": "2026-10-04",
+    "title": "Mass Protests Erupt in Spain Over Housing Crisis",
+    "slug": "2026-10-04/mass-protests-erupt-in-spain-over-housing-crisis",
+    "review": {
+      "passes": 1,
+      "approved": true,
+      "notes": [
+        {
+          "path": "body",
+          "message": "The attendance figures for the protest in Madrid contain conflicting estimates, so clarify this by presenting both figures as estimates rather than definitive numbers to eliminate overconfidence.",
+          "severity": "medium"
+        },
+        {
+          "path": "frontmatter.sources",
+          "message": "Include the BBC News article as a source to support the claims made within the article.",
+          "severity": "high"
+        }
+      ]
+    }
+  },
+  {
     "date": "2026-10-02",
     "title": "Kyiv Endures Intensified Attacks Amid Escalating Conflict",
     "slug": "2026-10-02/kyiv-endures-intensified-attacks-amid-escalating-conflict",
