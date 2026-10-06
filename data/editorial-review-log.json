@@ -1,5 +1,59 @@
 [
   {
+    "date": "2026-10-06",
+    "title": "Ebola's Arrival in Kenya: A New Public Health Challenge",
+    "slug": "2026-10-06/ebolas-arrival-in-kenya-a-new-public-health-challenge",
+    "review": {
+      "passes": 2,
+      "approved": false,
+      "notes": [
+        {
+          "path": "body",
+          "message": "The article incorrectly mentions 8,544 reported cases and 4,114 deaths; the correct figures are 8,554 cases and 4,114 deaths. This needs correction for accuracy.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The text mentions 'four vaccines are under development' for Bundibugyo species of Ebola without providing details from authoritative sources. This could be misleading or inaccurate without proper citation.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The timeline mentions that the patient fell ill in 'September 2026', but Ebola cases in Kenya were declared in 'October 2026'. The timeline should be clear and consistent.",
+          "severity": "low"
+        },
+        {
+          "path": [
+            "body"
+          ],
+          "message": "The draft overstates the severity of the Ebola outbreak by inaccurately citing over 4,114 deaths instead of the correct 4,000 figure reported in the source.",
+          "severity": "medium"
+        },
+        {
+          "path": [
+            "body"
+          ],
+          "message": "While the article mentions there are no approved vaccines, it should clarify that four vaccines are currently in development, with human trials for one initiated in July 2026.",
+          "severity": "low"
+        },
+        {
+          "path": [
+            "body"
+          ],
+          "message": "The patient death date is imprecise. The article mentions the patient passed away shortly after arrival in Nairobi, but a specific timeframe based on the facts would improve precision.",
+          "severity": "low"
+        },
+        {
+          "path": [
+            "body"
+          ],
+          "message": "The statement that the situation poses a 'significant public health challenge' lacks specific evidence or expert opinions supporting such urgency or threat level, except from general concerns.",
+          "severity": "medium"
+        }
+      ]
+    }
+  },
+  {
     "date": "2026-10-04",
     "title": "Mass Protests Erupt in Spain Over Housing Crisis",
     "slug": "2026-10-04/mass-protests-erupt-in-spain-over-housing-crisis",
