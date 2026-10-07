@@ -1,5 +1,51 @@
 [
   {
+    "date": "2026-10-07",
+    "title": "Tragic Missile Strike in Ukraine Highlights Ongoing Humanitarian Crisis",
+    "slug": "2026-10-07/tragic-missile-strike-in-ukraine-highlights-ongoing-humanitarian-crisis",
+    "review": {
+      "passes": 2,
+      "approved": true,
+      "notes": [
+        {
+          "path": "body.details",
+          "message": "The claim about the death of 'Sasha alongside his mother and grandmother' and the survival of 'his sister Olha' lacks direct attribution to any source or official confirmation.",
+          "severity": "medium"
+        },
+        {
+          "path": "body.officialResponses",
+          "message": "The statement that the attack was a 'birthday gift' lacks broader contextual grounding and comes off as speculative without direct quotes from the primary source.",
+          "severity": "medium"
+        },
+        {
+          "path": "body.conclusion",
+          "message": "The discussion of 'neither side indicating a willingness to compromise' is general and lacks specific context about current peace efforts or proposals.",
+          "severity": "medium"
+        },
+        {
+          "path": "title",
+          "message": "The title accurately reflects the reported events and context of the missile strike and its humanitarian impact.",
+          "severity": "low"
+        },
+        {
+          "path": "body",
+          "message": "The article text accurately captures the details and broader context provided by the research.",
+          "severity": "low"
+        },
+        {
+          "path": "body",
+          "message": "Information about the Ukrainian President's response and the call for international support is consistent with the source material.",
+          "severity": "low"
+        },
+        {
+          "path": "frontmatter.tags",
+          "message": "Tags are relevant and correctly represent the article content.",
+          "severity": "low"
+        }
+      ]
+    }
+  },
+  {
     "date": "2026-10-06",
     "title": "Ebola's Arrival in Kenya: A New Public Health Challenge",
     "slug": "2026-10-06/ebolas-arrival-in-kenya-a-new-public-health-challenge",
