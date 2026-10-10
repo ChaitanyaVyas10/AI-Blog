@@ -1,5 +1,31 @@
 [
   {
+    "date": "2026-10-10",
+    "title": "Tragic Impact of Russian Glide Bomb Attack in Zaporizhzhia",
+    "slug": "2026-10-10/tragic-impact-of-russian-glide-bomb-attack-in-zaporizhzhia",
+    "review": {
+      "passes": 1,
+      "approved": true,
+      "notes": [
+        {
+          "path": "body",
+          "message": "The draft correctly cites the BBC article as its source. All claims made are well-supported by the information in the research package, ensuring factual accuracy.",
+          "severity": "low"
+        },
+        {
+          "path": "body",
+          "message": "The draft effectively presents the context and reactions surrounding the attack, drawing from both Ukrainian and Russian governmental perspectives as outlined in the research package.",
+          "severity": "low"
+        },
+        {
+          "path": "frontmatter",
+          "message": "The article does not present false balance, as it clearly presents disputed claims and provides both sides of the narrative according to the research package.",
+          "severity": "low"
+        }
+      ]
+    }
+  },
+  {
     "date": "2026-10-09",
     "title": "US Sanctions on the International Criminal Court: Analyzing the Global Implications",
     "slug": "2026-10-09/us-sanctions-on-the-international-criminal-court-analyzing-the-global-implications",
