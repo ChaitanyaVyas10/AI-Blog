@@ -1,5 +1,52 @@
 [
   {
+    "date": "2026-10-11",
+    "title": "Saudi Arabia's Riyadh airport hit by second Houthi strike in two days",
+    "slug": "2026-10-11/saudi-arabias-riyadh-airport-hit-by-second-houthi-strike-in-two-days",
+    "review": {
+      "passes": 2,
+      "approved": false,
+      "notes": [
+        {
+          "path": "body",
+          "message": "The article gives the impression that there is a confirmed US plan for military intervention. The source only suggests that there is potential, without certainty.",
+          "severity": "high"
+        },
+        {
+          "path": "body",
+          "message": "The timeline for the attacks seems to contain inconsistencies. The draft describes a first attack on October 10, yet the Research specifies an October 8 event with deaths. This requires clarification.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The article describes the physical damage as something that can be swiftly managed, which may understate the broader implications of recurrent strikes. This is a nuanced view that requires careful presentation.",
+          "severity": "medium"
+        },
+        {
+          "path": [
+            "body"
+          ],
+          "message": "The draft mentions 'October 11, 2026' which is a future date. This seems to be an error.",
+          "severity": "high"
+        },
+        {
+          "path": [
+            "body"
+          ],
+          "message": "The article suggests a significant international dimension without specific evidence or analysis of broader international reactions or impacts beyond regional responses.",
+          "severity": "medium"
+        },
+        {
+          "path": [
+            "body"
+          ],
+          "message": "The draft speculates about U.S. military interventions but should clarify that this remains speculative based on the current state of information.",
+          "severity": "medium"
+        }
+      ]
+    }
+  },
+  {
     "date": "2026-10-10",
     "title": "Tragic Impact of Russian Glide Bomb Attack in Zaporizhzhia",
     "slug": "2026-10-10/tragic-impact-of-russian-glide-bomb-attack-in-zaporizhzhia",
