@@ -1,5 +1,36 @@
 [
   {
+    "date": "2026-10-13",
+    "title": "MI5 Chief Highlights Rising Threats from Russia, Iran, and Artificial Intelligence",
+    "slug": "2026-10-13/mi5-chief-highlights-rising-threats-from-russia-iran-and-artificial-intelligence",
+    "review": {
+      "passes": 1,
+      "approved": true,
+      "notes": [
+        {
+          "path": "body",
+          "message": "Claim about 'Russia's reliance on hybrid warfare' requires clarification that this refers to non-military tactics like cyber-attacks and misinformation, as defined in the research.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The statement 'nearly 1,000 Russian spies from the UK' requires strengthening with context from the source about the expulsions since the Ukraine invasion.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "AI's potential role in bioweapons is noted as a future threat and not yet realized; the draft should specify this to avoid overstating the current threat level.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The connection between Brexit and foreign interference requires clarification on the distinction between attempts at interference and actual impact on outcomes, as expressed by Sir Ken McCallum.",
+          "severity": "medium"
+        }
+      ]
+    }
+  },
+  {
     "date": "2026-10-12",
     "title": "Tragic Boat Capsize Near Djibouti Highlights Migration Risks",
     "slug": "2026-10-12/tragic-boat-capsize-near-djibouti-highlights-migration-risks",
