@@ -1,5 +1,46 @@
 [
   {
+    "date": "2026-10-16",
+    "title": "Ukraine Defends Right to Self-Defense Amid Trump Criticism",
+    "slug": "2026-10-16/ukraine-defends-right-to-self-defense-amid-trump-criticism",
+    "review": {
+      "passes": 2,
+      "approved": false,
+      "notes": [
+        {
+          "path": "body",
+          "message": "The article presents a claim that Trump stated that Zelensky's actions allegedly affect global oil prices without clear attribution or adequate support from the provided sources.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The statement about Trump's energy deal being controversial and potentially funding Putin's war efforts lacks supporting evidence from the research package.",
+          "severity": "high"
+        },
+        {
+          "path": "body",
+          "message": "The tone implies overconfidence in stating the perspectives without acknowledging the nuance needed for claims regarding international relations and their complexity.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The article claims Trump's criticism is linked to his energy dealings with Russia without sufficient evidence provided in the research.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The phrase 'perceived by some as potentially troublesome for Ukraine' lacks clarity on who perceives these dealings as troublesome and on what basis.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The statement about the influence on global oil prices due to military actions is mentioned as not having enough information, which could imply speculation.",
+          "severity": "high"
+        }
+      ]
+    }
+  },
+  {
     "date": "2026-10-15",
     "title": "Escalating Tensions: Russia Accuses Ukraine of Oil Refinery Attack",
     "slug": "2026-10-15/escalating-tensions-russia-accuses-ukraine-of-oil-refinery-attack",
