@@ -1,5 +1,56 @@
 [
   {
+    "date": "2026-10-17",
+    "title": "Record Decline in Amazon Deforestation as Brazilian Election Nears",
+    "slug": "2026-10-17/record-decline-in-amazon-deforestation-as-brazilian-election-nears",
+    "review": {
+      "passes": 2,
+      "approved": false,
+      "notes": [
+        {
+          "path": "body",
+          "message": "The draft incorrectly states the deforestation rate decrease occurred up to July 2026, but it's not confirmed by reliable sources as of the last update.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The statement about Flavio Bolsonaro continuing his father's policies lacks concrete evidence and is speculative.",
+          "severity": "high"
+        },
+        {
+          "path": "body",
+          "message": "The draft presents the deforestation decrease as a record without noting any potential factors other than Lula's policies.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The timeline of Jair Bolsonaro's impact is overstated without considering any other possible influences on deforestation rates.",
+          "severity": "high"
+        },
+        {
+          "path": "body",
+          "message": "The draft lacks context regarding satellite data collection methods responsible for tracking deforestation rates.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The claim about Flavio Bolsonaro continuing his father's policies is speculative and lacks substantiation.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "Reference to Marcio Astrini and his views lacks sufficient context about his role and the organization's stance.",
+          "severity": "low"
+        },
+        {
+          "path": "body",
+          "message": "The article fails to mention Lula's specific policy changes that contributed to the decline in deforestation.",
+          "severity": "medium"
+        }
+      ]
+    }
+  },
+  {
     "date": "2026-10-16",
     "title": "Ukraine Defends Right to Self-Defense Amid Trump Criticism",
     "slug": "2026-10-16/ukraine-defends-right-to-self-defense-amid-trump-criticism",
