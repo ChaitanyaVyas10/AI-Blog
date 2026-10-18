@@ -1,5 +1,61 @@
 [
   {
+    "date": "2026-10-18",
+    "title": "Deadly Attack on Oil Facilities in St Petersburg",
+    "slug": "2026-10-18/deadly-attack-on-oil-facilities-in-st-petersburg",
+    "review": {
+      "passes": 2,
+      "approved": false,
+      "notes": [
+        {
+          "path": "body",
+          "message": "The draft mentions a supposed 'operational pause' in Ukraine's targeting of Russian oil facilities, yet this is not sufficiently backed by the research package. There's a lack of confirmation or supporting information on the operational pause.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The article presents the perspective that St Petersburg oil facilities are integral to the global oil supply chain, but this significance is not supported by specific data or analysis in the research package.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The inclusion of 'tens of thousands reportedly facing power outages' lacks detailed source attribution and verification in the research package.",
+          "severity": "low"
+        },
+        {
+          "path": "body",
+          "message": "The statement suggesting uncertainties about the implications for global oil markets is accurate but lacks depth. It should include more analysis or expert opinions to provide context.",
+          "severity": "low"
+        },
+        {
+          "path": "frontmatter.sources",
+          "message": "More sources should be included to substantiate various claims made in the article.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The article lacks context regarding prior events that have led to increased tensions in the region, which is crucial for fully understanding the attack.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The article mentions power outages in the region, but it does not specify the scale, leaving the impact unclear and not entirely supported by the research.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "There is an implied linkage between this attack and global oil prices that is speculative without further evidence or expert analysis.",
+          "severity": "high"
+        },
+        {
+          "path": "body",
+          "message": "The section on Russian military claims about drone interceptions needs more context to avoid overemphasizing potentially unsupported claims.",
+          "severity": "medium"
+        }
+      ]
+    }
+  },
+  {
     "date": "2026-10-17",
     "title": "Record Decline in Amazon Deforestation as Brazilian Election Nears",
     "slug": "2026-10-17/record-decline-in-amazon-deforestation-as-brazilian-election-nears",
