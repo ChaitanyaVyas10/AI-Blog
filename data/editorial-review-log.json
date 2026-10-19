@@ -1,5 +1,51 @@
 [
   {
+    "date": "2026-10-19",
+    "title": "Beheading of Exiled Rwandan Critic: Unanswered Questions and Concerns for Dissenters' Safety",
+    "slug": "2026-10-19/beheading-of-exiled-rwandan-critic-unanswered-questions-and-concerns-for-dissenters-safety",
+    "review": {
+      "passes": 2,
+      "approved": false,
+      "notes": [
+        {
+          "path": "frontmatter.description",
+          "message": "The description implies a direct connection between the Rwandan government and the murder without evidence to support this claim in the draft or research.",
+          "severity": "high"
+        },
+        {
+          "path": "body",
+          "message": "The draft lacks sufficient attribution of claims regarding the pattern of deadly outcomes for Rwandan dissidents. It provides unqualified statements without supporting evidence or sources beyond a single previous incident.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The draft mentions a pattern of political repression but does not provide comprehensive evidence or sources to substantiate this claim, beyond a single example from 2014.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The motivations behind the murder are mentioned as uncertain, but the language used still implies a political motive without evidence. The article should remain neutral until evidence is presented.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The article makes speculative claims about the involvement of the Rwandan government without concrete evidence. This possibility should be presented with caution and clearly flagged as speculative.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The article lacks context about the broader historical tension between the Rwandan government and its critics, which could help readers understand the significance of Kabera's murder in a broader context.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The article fails to adequately mention that the Ugandan authorities' investigation is ongoing and have not accused anyone specifically. This omission can mislead readers to draw premature conclusions.",
+          "severity": "medium"
+        }
+      ]
+    }
+  },
+  {
     "date": "2026-10-18",
     "title": "Deadly Attack on Oil Facilities in St Petersburg",
     "slug": "2026-10-18/deadly-attack-on-oil-facilities-in-st-petersburg",
