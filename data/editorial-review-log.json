@@ -1,5 +1,50 @@
 [
   {
+    "date": "2026-10-20",
+    "title": "Escalating Conflict in Sudan: Drone Strikes Cause Over 300 Deaths",
+    "slug": "2026-10-20/escalating-conflict-in-sudan-drone-strikes-cause-over-300-deaths",
+    "review": {
+      "passes": 2,
+      "approved": true,
+      "notes": [
+        {
+          "path": "frontmatter.description",
+          "message": "The description implies that over 300 civilian deaths were due to drone strikes, but the article should specify that not all were confirmed civilians.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The date mentioned (October 16, 2026) is in the future. This needs correction for accuracy.",
+          "severity": "high"
+        },
+        {
+          "path": "body",
+          "message": "Claims about the number displaced and facing hunger are presented without a specific source citation, which is needed for verification.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The language presents the army's denial of targeting civilians as under scrutiny but lacks evidence or quotes from independent sources questioning this claim.",
+          "severity": "medium"
+        },
+        {
+          "path": [
+            "body"
+          ],
+          "message": "The original wording implied certainty regarding the targeting of non-combatants, while the research mentions accusations and denials, requiring a restatement to reflect these nuances.",
+          "severity": "medium"
+        },
+        {
+          "path": [
+            "body"
+          ],
+          "message": "The mention of the exact number of civilian casualties at the fuel market is uncertain and needed clarification that the numbers represented reported figures, not verified totals.",
+          "severity": "medium"
+        }
+      ]
+    }
+  },
+  {
     "date": "2026-10-19",
     "title": "Beheading of Exiled Rwandan Critic: Unanswered Questions and Concerns for Dissenters' Safety",
     "slug": "2026-10-19/beheading-of-exiled-rwandan-critic-unanswered-questions-and-concerns-for-dissenters-safety",
