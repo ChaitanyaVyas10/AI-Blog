@@ -1,5 +1,76 @@
 [
   {
+    "date": "2026-10-21",
+    "title": "Russia ready to resume talks with Ukraine and US to end war",
+    "slug": "2026-10-21/russia-ready-to-resume-talks-with-ukraine-and-us-to-end-war",
+    "review": {
+      "passes": 2,
+      "approved": false,
+      "notes": [
+        {
+          "path": [
+            "frontmatter",
+            "title"
+          ],
+          "message": "The title claims Russia expressed willingness to resume peace talks with both Ukraine and the US, but the draft only mentions discussions involving all three parties, not a distinct bilateral willingness towards both parties.",
+          "severity": "medium"
+        },
+        {
+          "path": [
+            "body"
+          ],
+          "message": "The draft incorrectly dates the start of the conflict as 2022; it should be 2014 with the formal escalation in 2022.",
+          "severity": "high"
+        },
+        {
+          "path": [
+            "body"
+          ],
+          "message": "There is insufficient context about the historical background of the conflict and the nature of previous talks.",
+          "severity": "medium"
+        },
+        {
+          "path": [
+            "body"
+          ],
+          "message": "The draft implies that the conflict is nearing its fifth year, which is incorrect; the conflict has been ongoing since 2014, although intensified in 2022.",
+          "severity": "high"
+        },
+        {
+          "path": [
+            "body"
+          ],
+          "message": "There is no source verification of specific details about Yuriy Ushakov's comments on the usefulness of Witkoff's proposals.",
+          "severity": "medium"
+        },
+        {
+          "path": [
+            "body",
+            "second paragraph"
+          ],
+          "message": "The article incorrectly names US President Donald Trump's special envoy as Steve Witkoff. Steve Witkoff is known as a real estate developer, not likely involved in diplomatic envoys.",
+          "severity": "high"
+        },
+        {
+          "path": [
+            "body",
+            "fourth paragraph"
+          ],
+          "message": "The talks were disrupted earlier in 2026, but the precise reasons are speculative. Include specific reasons if available or acknowledge ambiguity.",
+          "severity": "medium"
+        },
+        {
+          "path": [
+            "body",
+            "fifth paragraph"
+          ],
+          "message": "The article lacks context on why Ushakov skeptically viewed the proposals, making unclear the dynamics of the discussions.",
+          "severity": "medium"
+        }
+      ]
+    }
+  },
+  {
     "date": "2026-10-20",
     "title": "Escalating Conflict in Sudan: Drone Strikes Cause Over 300 Deaths",
     "slug": "2026-10-20/escalating-conflict-in-sudan-drone-strikes-cause-over-300-deaths",
