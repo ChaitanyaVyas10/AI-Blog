@@ -1,5 +1,61 @@
 [
   {
+    "date": "2026-10-22",
+    "title": "Missiles hit Kyiv after Russia agrees to US call to resume Ukraine peace talks",
+    "slug": "2026-10-22/missiles-hit-kyiv-after-russia-agrees-to-us-call-to-resume-ukraine-peace-talks",
+    "review": {
+      "passes": 2,
+      "approved": false,
+      "notes": [
+        {
+          "path": "body",
+          "message": "The draft suggests Jared Kushner is involved in current diplomatic efforts, which is not supported by the research package that only mentions Steve Witkoff as the envoy.",
+          "severity": "high"
+        },
+        {
+          "path": "body",
+          "message": "The article incorrectly credits President Trump as being involved in current US diplomatic efforts, without supporting evidence from the research package.",
+          "severity": "high"
+        },
+        {
+          "path": "body",
+          "message": "The statement about Ukrainian defenses being depleted of 'Western-supplied interceptors' lacks context or explanation in the research package.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "No source supports the claim that Russian meetings were held in Oslo. Research only mentions a meeting with Zelensky in Oslo.",
+          "severity": "medium"
+        },
+        {
+          "path": "body/0",
+          "message": "The mention of Steve Witkoff's involvement lacks context and presents new information that could confuse readers unaware of his role.",
+          "severity": "medium"
+        },
+        {
+          "path": "body/1",
+          "message": "Incorrect location for meeting with Ukrainian President Volodymyr Zelensky; sources indicate meetings occurred in Oslo, not Kyiv.",
+          "severity": "high"
+        },
+        {
+          "path": "body/3",
+          "message": "Overconfidence and false balance: The claimed breakdown in communication lacks support from the research, which does not confirm such a breakdown occurred.",
+          "severity": "medium"
+        },
+        {
+          "path": "body/6",
+          "message": "The specifics of Steve Witkoff's proposals to Putin are unknown, causing an unsupported assertion regarding their impact.",
+          "severity": "medium"
+        },
+        {
+          "path": "body/7",
+          "message": "The link to the BBC article requires verification, as the URL is not structured correctly.",
+          "severity": "medium"
+        }
+      ]
+    }
+  },
+  {
     "date": "2026-10-21",
     "title": "Russia ready to resume talks with Ukraine and US to end war",
     "slug": "2026-10-21/russia-ready-to-resume-talks-with-ukraine-and-us-to-end-war",
