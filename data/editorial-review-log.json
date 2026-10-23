@@ -1,5 +1,24 @@
 [
   {
+    "date": "2026-10-23",
+    "title": "Gunmen Attack Church Funeral in Jordan, Leaving Seven Dead",
+    "slug": "2026-10-23/gunmen-attack-church-funeral-in-jordan-leaving-seven-dead",
+    "review": {
+      "passes": 1,
+      "approved": true,
+      "notes": [
+        {
+          "path": [
+            "frontmatter",
+            "sources"
+          ],
+          "message": "Only one source is referenced in the sources, reducing the reliability. Consider adding more sources.",
+          "severity": "medium"
+        }
+      ]
+    }
+  },
+  {
     "date": "2026-10-22",
     "title": "Missiles hit Kyiv after Russia agrees to US call to resume Ukraine peace talks",
     "slug": "2026-10-22/missiles-hit-kyiv-after-russia-agrees-to-us-call-to-resume-ukraine-peace-talks",
