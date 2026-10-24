@@ -1,5 +1,61 @@
 [
   {
+    "date": "2026-10-24",
+    "title": "Seven missing after multi-storey building collapses in Kenya's capital",
+    "slug": "2026-10-24/seven-missing-after-multi-storey-building-collapses-in-kenyas-capital",
+    "review": {
+      "passes": 2,
+      "approved": false,
+      "notes": [
+        {
+          "path": "frontmatter.title",
+          "message": "Title states alarm on construction practices without providing enough evidence in the text for 'alarm'.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The article makes claims about regulatory shortcomings without sufficient support or specificity about these shortcomings.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The article suggests the pressure to quickly develop infrastructure may compromise safety, but lacks specific examples or data to support this claim.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The conclusion calls for adherence to building regulations but does not provide new insights or solutions not already mentioned in the article.",
+          "severity": "low"
+        },
+        {
+          "path": "body",
+          "message": "There is an assumption of neglected safety standards without concrete evidence presented in the article.",
+          "severity": "medium"
+        },
+        {
+          "path": "title",
+          "message": "The title could imply a lack of safety standards without sufficient evidence presented in the article.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The article suggests that the collapse was due to poor regulatory oversight, but further investigations are needed to substantiate this claim.",
+          "severity": "high"
+        },
+        {
+          "path": "body",
+          "message": "Lacks mention of any prior safety inspections or historical context on building collapses.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The article does not reference any specific actions taken by authorities to enhance building safety regulations following past incidents.",
+          "severity": "low"
+        }
+      ]
+    }
+  },
+  {
     "date": "2026-10-23",
     "title": "Gunmen Attack Church Funeral in Jordan, Leaving Seven Dead",
     "slug": "2026-10-23/gunmen-attack-church-funeral-in-jordan-leaving-seven-dead",
