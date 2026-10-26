@@ -1,5 +1,76 @@
 [
   {
+    "date": "2026-10-26",
+    "title": "Lula's Fourth Presidency in Brazil Signals Leadership Change",
+    "slug": "2026-10-26/lulas-fourth-presidency-in-brazil-signals-leadership-change",
+    "review": {
+      "passes": 2,
+      "approved": false,
+      "notes": [
+        {
+          "path": "frontmatter.title",
+          "message": "The title claims Lula won a 'fourth term' which is misleading as it suggests continuous terms, whereas he served non-consecutive terms.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The statement 'Lula managed to secure a decisive win with 51.79% of the vote' lacks clarity on what constitutes a 'decisive' victory as it's a relatively narrow margin.",
+          "severity": "low"
+        },
+        {
+          "path": "body",
+          "message": "The assertion about the largest drop in abstention rates since 1989 is unsupported without specific data or comparable statistics.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "There's an overemphasis on Bolsonaro's refusal to recognize the result without sufficient exploration of its implications or expert analysis.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "Incorrect statement regarding Lula's new term starting on 'January 5, 2027'. The correct date is 'January 1, 2027'.",
+          "severity": "high"
+        },
+        {
+          "path": "body",
+          "message": "Speculation around international community reactions is presented too boldly without direct evidence or citations, particularly regarding US response.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The article incorrectly states that Lula's new term commences on January 1, 2027, instead of January 5, 2027, as indicated in the research.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The draft suggests that Lula's presidency extends to 2030 improperly without specifying it is due to the term length concluding at that year.",
+          "severity": "low"
+        },
+        {
+          "path": "body",
+          "message": "The draft inaccurately credits only Justice Cristiano Zanin for extending voting hours, omitting that the decision was confirmed by Supreme Electoral Court President Kássio Nunes Marques.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The statement that this is a 'dramatic political comeback' lacks additional context on Lula's previous terms and the political landscape.",
+          "severity": "low"
+        },
+        {
+          "path": "body",
+          "message": "Potential challenges Lula faces in Congress are mentioned briefly but without specifics, such as the possible opposition he'll encounter.",
+          "severity": "low"
+        },
+        {
+          "path": "body",
+          "message": "The article does not specify the implications of Lula's leadership on regional politics, though it mentions the possibility.",
+          "severity": "medium"
+        }
+      ]
+    }
+  },
+  {
     "date": "2026-10-25",
     "title": "Mass Protests and Arrests Signal Growing Unrest in France",
     "slug": "2026-10-25/mass-protests-and-arrests-signal-growing-unrest-in-france",
