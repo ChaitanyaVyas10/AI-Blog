@@ -1,5 +1,31 @@
 [
   {
+    "date": "2026-10-27",
+    "title": "Record Voter Turnout in Israel's Pivotal Election",
+    "slug": "2026-10-27/record-voter-turnout-in-israels-pivotal-election",
+    "review": {
+      "passes": 1,
+      "approved": true,
+      "notes": [
+        {
+          "path": "body",
+          "message": "Clarify the context of the political situation between Netanyahu and Eisenkot, as well as the role of Arab parties.",
+          "severity": "medium"
+        },
+        {
+          "path": "frontmatter.description",
+          "message": "Ensure the description matches the supported facts and provides clear implications.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "Correct the claim regarding Netanyahu's military actions without supporting evidence in the research package.",
+          "severity": "high"
+        }
+      ]
+    }
+  },
+  {
     "date": "2026-10-26",
     "title": "Lula's Fourth Presidency in Brazil Signals Leadership Change",
     "slug": "2026-10-26/lulas-fourth-presidency-in-brazil-signals-leadership-change",
