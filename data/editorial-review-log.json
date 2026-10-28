@@ -1,5 +1,21 @@
 [
   {
+    "date": "2026-10-28",
+    "title": "Israel's Election: Netanyahu Leads but Falls Short of a Majority",
+    "slug": "2026-10-28/israels-election-netanyahu-leads-but-falls-short-of-a-majority",
+    "review": {
+      "passes": 1,
+      "approved": true,
+      "notes": [
+        {
+          "path": "body",
+          "message": "The claim that \"Arab-led parties could play a pivotal role as kingmakers\" needs to be clarified with context regarding historical cooperation challenges between these parties and Jewish opposition parties.",
+          "severity": "medium"
+        }
+      ]
+    }
+  },
+  {
     "date": "2026-10-27",
     "title": "Record Voter Turnout in Israel's Pivotal Election",
     "slug": "2026-10-27/record-voter-turnout-in-israels-pivotal-election",
