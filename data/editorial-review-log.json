@@ -1,5 +1,36 @@
 [
   {
+    "date": "2026-10-29",
+    "title": "Russian Drone Attack on Ukrainian Train Station Escalates Humanitarian Concerns",
+    "slug": "2026-10-29/russian-drone-attack-on-ukrainian-train-station-escalates-humanitarian-concerns",
+    "review": {
+      "passes": 1,
+      "approved": true,
+      "notes": [
+        {
+          "path": "frontmatter.title",
+          "message": "The title provides a clear and accurate summary of the article's main point.",
+          "severity": "low"
+        },
+        {
+          "path": "body.Incident Details",
+          "message": "The draft accurately summarizes the details of the incident with reference to the source material.",
+          "severity": "low"
+        },
+        {
+          "path": "body.Background and Context",
+          "message": "Mention of statistics requires citation verification, found accurate per the research data.",
+          "severity": "low"
+        },
+        {
+          "path": "body.Conflicting Claims and Perspectives",
+          "message": "Accurately represents both Ukrainian and Russian perspectives without bias according to the source data.",
+          "severity": "low"
+        }
+      ]
+    }
+  },
+  {
     "date": "2026-10-28",
     "title": "Israel's Election: Netanyahu Leads but Falls Short of a Majority",
     "slug": "2026-10-28/israels-election-netanyahu-leads-but-falls-short-of-a-majority",
