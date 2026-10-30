@@ -1,5 +1,56 @@
 [
   {
+    "date": "2026-10-30",
+    "title": "Crypto giant Binance attempting to recover $6.3bn stolen in hack linked to North Korea",
+    "slug": "2026-10-30/crypto-giant-binance-attempting-to-recover-dollar63bn-stolen-in-hack-linked-to-north-korea",
+    "review": {
+      "passes": 2,
+      "approved": false,
+      "notes": [
+        {
+          "path": "frontmatter.title",
+          "message": "The title claims a $6.3 billion hack, which is accurate, but suggests certainty about North Korean involvement, not confirmed.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The claim about the $6.3 billion theft being confirmed as linked to North Korea is presented with more confidence than supported by available sources.",
+          "severity": "high"
+        },
+        {
+          "path": "body",
+          "message": "The statement that this is the largest hack in history needs more context explaining how this is measured and reported.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The draft lacks detailed context about how Binance plans to address future vulnerabilities to reassure stakeholders.",
+          "severity": "low"
+        },
+        {
+          "path": "frontmatter.tags",
+          "message": "The tags currently include 'North Korea,' suggesting confirmed involvement rather than suspected. Needs adjustment.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The headline date appears inaccurate. Events mentioned could not have taken place in 2026 given the document context.",
+          "severity": "high"
+        },
+        {
+          "path": "body",
+          "message": "The direct link to North Korea is presented without clear qualification; needs adjustment to reflect uncertainty.",
+          "severity": "medium"
+        },
+        {
+          "path": "sources[0]",
+          "message": "There is no source provided for the event beyond BBC coverage, which is not independently verified here.",
+          "severity": "medium"
+        }
+      ]
+    }
+  },
+  {
     "date": "2026-10-29",
     "title": "Russian Drone Attack on Ukrainian Train Station Escalates Humanitarian Concerns",
     "slug": "2026-10-29/russian-drone-attack-on-ukrainian-train-station-escalates-humanitarian-concerns",
