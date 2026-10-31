@@ -1,5 +1,61 @@
 [
   {
+    "date": "2026-10-31",
+    "title": "More than 5,000 die from Ebola in DR Congo's deadliest outbreak",
+    "slug": "2026-10-31/more-than-5000-die-from-ebola-in-dr-congos-deadliest-outbreak",
+    "review": {
+      "passes": 2,
+      "approved": false,
+      "notes": [
+        {
+          "path": "frontmatter.description",
+          "message": "Description inaccurately states 'over 5,000 lives' whereas the exact count is 5,000.",
+          "severity": "low"
+        },
+        {
+          "path": "body",
+          "message": "Implies there are no treatments for the Bundibugyo strain, whereas some supportive treatments exist even without a specific vaccine.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The draft omits any mention of supportive treatments available, focusing only on a lack of a specific vaccine.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The statement '5,000 fatalities reported, as noted by BBC News' lacks direct support from the linked source, which broadly discusses the outbreak. Ensure the reference correctly supports the specific claim.",
+          "severity": "high"
+        },
+        {
+          "path": "body",
+          "message": "The claim 'began in May 2026' requires context for clarity. It's unclear what the precise timeline for detection and spread is; check if there are additional details in the research package to support this.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The severity of calling it the deadliest outbreak in history may not be fully contextualized without comparing it comprehensively with past global outbreaks, despite it being deadliest in DRC's history.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The statement 'There is currently no specific approved vaccine for this strain' should specify that efforts toward vaccines are in progress to avoid implying hopelessness.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "Clarify the number of cases internationally; specific numbers for Kenya, Nigeria, and Uganda are not provided in the draft.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The influence of local conditions, such as political stability and infrastructure on virus control efforts, is missing and would provide critical context to challenges in outbreak management.",
+          "severity": "low"
+        }
+      ]
+    }
+  },
+  {
     "date": "2026-10-30",
     "title": "Crypto giant Binance attempting to recover $6.3bn stolen in hack linked to North Korea",
     "slug": "2026-10-30/crypto-giant-binance-attempting-to-recover-dollar63bn-stolen-in-hack-linked-to-north-korea",
