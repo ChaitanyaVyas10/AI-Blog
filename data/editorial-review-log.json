@@ -1,5 +1,61 @@
 [
   {
+    "date": "2026-11-01",
+    "title": "Israeli strikes in Gaza kill eight including child, hospitals say",
+    "slug": "2026-11-01/israeli-strikes-in-gaza-kill-eight-including-child-hospitals-say",
+    "review": {
+      "passes": 2,
+      "approved": false,
+      "notes": [
+        {
+          "path": "body",
+          "message": "The draft claims a ceasefire has been in place since October 2025, but does not provide context on its effectiveness or broader implications, resulting in potential confusion about current political conditions.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The statement about a stalled peace plan brokered by the Trump administration lacks current context, as Trump's presidency ended in January 2021 and no further details or updates are provided.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The draft mentions 74,594 deaths in Gaza since the conflict began, but lacks clarification on the source and credibility of these figures, which could lead to misinterpretation.",
+          "severity": "high"
+        },
+        {
+          "path": "body",
+          "message": "The description of the humanitarian situation lacks nuance and additional perspectives, particularly on proposed international interventions, leaving the piece unbalanced.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "There is no direct evidence or citation supporting claims of international intervention being urgently necessary, as suggested by the draft.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The claim of 74,594 deaths in Gaza since the war began is misleading. This figure conflates the total loss of life over a longer period and should be clarified.",
+          "severity": "high"
+        },
+        {
+          "path": "body",
+          "message": "The article states that Israeli airstrikes have been frequent since the ceasefire, but lacks specific evidence or frequency details to substantiate this claim.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The statement that the UN considers the Gaza health ministry 'generally reliable' should include specific references or evidence supporting this assertion.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The article lacks balance by not providing sufficient Israeli perspective or context for their military actions beyond their claims of targeting operatives.",
+          "severity": "medium"
+        }
+      ]
+    }
+  },
+  {
     "date": "2026-10-31",
     "title": "More than 5,000 die from Ebola in DR Congo's deadliest outbreak",
     "slug": "2026-10-31/more-than-5000-die-from-ebola-in-dr-congos-deadliest-outbreak",
