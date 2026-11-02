@@ -1,5 +1,56 @@
 [
   {
+    "date": "2026-11-02",
+    "title": "Russian bombing kills 26 people at Ukraine aid centre, Kyiv says",
+    "slug": "2026-11-02/russian-bombing-kills-26-people-at-ukraine-aid-centre-kyiv-says",
+    "review": {
+      "passes": 2,
+      "approved": false,
+      "notes": [
+        {
+          "path": "frontmatter.description",
+          "message": "Description mentions 'ongoing humanitarian crisis' which has not been sufficiently detailed or supported in the article.",
+          "severity": "medium"
+        },
+        {
+          "path": "body.1",
+          "message": "The article presents Russian responsibility for the bombing as fact, without acknowledging that this claim is attributed to Ukrainian officials and lacks a direct statement or comment from Russian sources.",
+          "severity": "high"
+        },
+        {
+          "path": "body.3",
+          "message": "The mention of peace talks in Abu Dhabi lacks context and clarity, as there are no details about these talks in the research provided.",
+          "severity": "medium"
+        },
+        {
+          "path": "body.5",
+          "message": "Conclusions about the international community's response and ongoing geopolitical analysis are speculative without sufficient evidence or multiple perspectives presented.",
+          "severity": "medium"
+        },
+        {
+          "path": "body.Tragic Events in Komyshuvakha",
+          "message": "The draft suggests that the bombing caused injuries but does not specify the number, which is available in the research. It should include that there were 5 injuries.",
+          "severity": "medium"
+        },
+        {
+          "path": "body.Tragic Events in Komyshuvakha",
+          "message": "The claim about Russian responsibility is presented as a primary assumption but it’s based solely on Ukrainian statements. This requires more balanced reporting by highlighting the absence of Russian comments and that this is a disputed claim.",
+          "severity": "high"
+        },
+        {
+          "path": "body.The Larger Context",
+          "message": "The paragraph mentions peace talks expected to resume but lacks the detail about them being anticipated in Abu Dhabi. This context is important.",
+          "severity": "medium"
+        },
+        {
+          "path": "sources",
+          "message": "The draft does not list multiple sources and relies heavily on a single BBC article. This reduces the perceived robustness and credibility of the report.",
+          "severity": "medium"
+        }
+      ]
+    }
+  },
+  {
     "date": "2026-11-01",
     "title": "Israeli strikes in Gaza kill eight including child, hospitals say",
     "slug": "2026-11-01/israeli-strikes-in-gaza-kill-eight-including-child-hospitals-say",
