@@ -1,5 +1,76 @@
 [
   {
+    "date": "2026-11-03",
+    "title": "Increasing Civilian Casualties Amid Ukraine Conflict Escalation",
+    "slug": "2026-11-03/increasing-civilian-casualties-amid-ukraine-conflict-escalation",
+    "review": {
+      "passes": 2,
+      "approved": false,
+      "notes": [
+        {
+          "path": "body",
+          "message": "The article includes specific future dates (Nov 2026) which need review for accuracy and temporal relevance.",
+          "severity": "high"
+        },
+        {
+          "path": "body",
+          "message": "The draft contains a mention of US President Donald Trump and First Lady Melania Trump in what seems to be a future context, which appears incorrect due to the timing.",
+          "severity": "high"
+        },
+        {
+          "path": "body",
+          "message": "The introduction lacks context about the current state of the conflict, missing reasons why these events are significant now.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The mention of peace talks needs more information regarding the parties involved and the implications for the conflict.",
+          "severity": "medium"
+        },
+        {
+          "path": [
+            "body",
+            "The Recent Strikes"
+          ],
+          "message": "The article states Ukrainian President Zelensky described the attack as 'one of the most significant mass killings', which is subjective. It should present it as Zelensky's perspective or provide a quote.",
+          "severity": "medium"
+        },
+        {
+          "path": [
+            "body",
+            "The Recent Strikes"
+          ],
+          "message": "The article refers to 'additional strikes in Dnipro and Kharkiv' without specifying the severity or scale of these attacks, which could mislead the reader about their impact.",
+          "severity": "medium"
+        },
+        {
+          "path": [
+            "body",
+            "Conflicting Claims"
+          ],
+          "message": "The article claims there is 'no credible evidence' supporting Russia's assertions without specifying how this conclusion was reached, which could mislead the reader about investigative findings. It should provide more details or cite specific sources from the research.",
+          "severity": "medium"
+        },
+        {
+          "path": [
+            "body",
+            "Moving Forward: Peace Talks"
+          ],
+          "message": "The draft implies confidence in the occurrence of peace talks but does not provide evidence or confirmation from reliable sources detailed in the research documents.",
+          "severity": "medium"
+        },
+        {
+          "path": [
+            "frontmatter",
+            "sources"
+          ],
+          "message": "The draft references only a single source, which may not provide comprehensive coverage of the topic.",
+          "severity": "medium"
+        }
+      ]
+    }
+  },
+  {
     "date": "2026-11-02",
     "title": "Russian bombing kills 26 people at Ukraine aid centre, Kyiv says",
     "slug": "2026-11-02/russian-bombing-kills-26-people-at-ukraine-aid-centre-kyiv-says",
