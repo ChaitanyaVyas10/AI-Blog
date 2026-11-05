@@ -1,5 +1,26 @@
 [
   {
+    "date": "2026-11-05",
+    "title": "French Protests Surge Amid Rising Cost of Living",
+    "slug": "2026-11-05/french-protests-surge-amid-rising-cost-of-living",
+    "review": {
+      "passes": 1,
+      "approved": true,
+      "notes": [
+        {
+          "path": "body",
+          "message": "The article accurately presents the numbers reported by the interior ministry and unions regarding protest participation without implying either figure as definitive.",
+          "severity": "low"
+        },
+        {
+          "path": "body",
+          "message": "The article correctly identifies the minimum wage and does not make unsupported predictions about future policy outcomes.",
+          "severity": "low"
+        }
+      ]
+    }
+  },
+  {
     "date": "2026-11-04",
     "title": "Ukraine says bodycam video shows deadly Russian double-tap bombing",
     "slug": "2026-11-04/ukraine-says-bodycam-video-shows-deadly-russian-double-tap-bombing",
