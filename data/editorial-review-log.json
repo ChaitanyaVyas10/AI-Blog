@@ -1,5 +1,21 @@
 [
   {
+    "date": "2026-11-06",
+    "title": "Justice for Victims: Life Sentence for Kenyan Doomsday Cult Leader",
+    "slug": "2026-11-06/justice-for-victims-life-sentence-for-kenyan-doomsday-cult-leader",
+    "review": {
+      "passes": 1,
+      "approved": true,
+      "notes": [
+        {
+          "path": "body",
+          "message": "The article provides a comprehensive overview of the case, but it would benefit from a clearer explanation of how the evidence was gathered and used to convict Mackenzie and the others involved. This enhancement could strengthen the reader's understanding of the judicial process in this case.",
+          "severity": "medium"
+        }
+      ]
+    }
+  },
+  {
     "date": "2026-11-05",
     "title": "French Protests Surge Amid Rising Cost of Living",
     "slug": "2026-11-05/french-protests-surge-amid-rising-cost-of-living",
