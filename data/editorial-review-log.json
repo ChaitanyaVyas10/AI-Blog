@@ -1,5 +1,38 @@
 [
   {
+    "date": "2026-11-11",
+    "title": "Spain's First General Strike in Over a Decade Signals Deep Labor Discontent",
+    "slug": "2026-11-11/spains-first-general-strike-in-over-a-decade-signals-deep-labor-discontent",
+    "review": {
+      "passes": 1,
+      "approved": true,
+      "notes": [
+        {
+          "path": [
+            "frontmatter",
+            "title"
+          ],
+          "message": "The title accurately reflects the content of the article and is supported by provided research.",
+          "severity": "low"
+        },
+        {
+          "path": [
+            "body"
+          ],
+          "message": "The article provides comprehensive coverage of the events and context around the strike, backed by the provided sources.",
+          "severity": "low"
+        },
+        {
+          "path": [
+            "body"
+          ],
+          "message": "The article mentions both perspectives on the strike's participation, providing balanced coverage of differing views.",
+          "severity": "low"
+        }
+      ]
+    }
+  },
+  {
     "date": "2026-11-10",
     "title": "First day of Ukraine peace talks constructive, Zelensky says",
     "slug": "2026-11-10/first-day-of-ukraine-peace-talks-constructive-zelensky-says",
