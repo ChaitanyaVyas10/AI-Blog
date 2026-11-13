@@ -1,5 +1,21 @@
 [
   {
+    "date": "2026-11-13",
+    "title": "The Global Impact of Microsoft's Prolonged Outage on Digital Services",
+    "slug": "2026-11-13/the-global-impact-of-microsofts-prolonged-outage-on-digital-services",
+    "review": {
+      "passes": 1,
+      "approved": true,
+      "notes": [
+        {
+          "path": "body",
+          "message": "The statement 'impacting more than 74 countries and affecting over 430 million users globally' is accurate based on the available data.",
+          "severity": "low"
+        }
+      ]
+    }
+  },
+  {
     "date": "2026-11-12",
     "title": "International Concerns Arise Following Israeli Strike on Gaza Hospital",
     "slug": "2026-11-12/international-concerns-arise-following-israeli-strike-on-gaza-hospital",
