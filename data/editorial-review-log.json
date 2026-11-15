@@ -1,5 +1,46 @@
 [
   {
+    "date": "2026-11-15",
+    "title": "Reported Drone Activity in Bahrain and US-Iran Relations",
+    "slug": "2026-11-15/reported-drone-activity-in-bahrain-and-us-iran-relations",
+    "review": {
+      "passes": 2,
+      "approved": true,
+      "notes": [
+        {
+          "path": "frontmatter.title",
+          "message": "Title might be misleading. Ensure accuracy unless verified by multiple reputable sources.",
+          "severity": "high"
+        },
+        {
+          "path": "body.Overview",
+          "message": "The body claims this was another attack within three days, but this requires explicit verification from the source.",
+          "severity": "medium"
+        },
+        {
+          "path": "body.Context and Tensions",
+          "message": "Description of Iran's actions over control of the Strait should include perspectives or rebuttals from US side according to balance principles.",
+          "severity": "medium"
+        },
+        {
+          "path": "body.Broader Implications",
+          "message": "Claim of recent US military actions targeting Iranian territory needs contextual support or a citation.",
+          "severity": "high"
+        },
+        {
+          "path": "body",
+          "message": "Claims and counterclaims regarding the targeted system require attribution to relevant perspectives.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "Broader implications discussion lacks specifics or reference to sources.",
+          "severity": "medium"
+        }
+      ]
+    }
+  },
+  {
     "date": "2026-11-14",
     "title": "US has floated Ukraine ceding Donbas for Nato membership, Zelensky says",
     "slug": "2026-11-14/us-has-floated-ukraine-ceding-donbas-for-nato-membership-zelensky-says",
