@@ -1,5 +1,37 @@
 [
   {
+    "date": "2026-11-16",
+    "title": "Significant Drone Attack Strikes Crimea Bridge Amidst Increasing Conflict",
+    "slug": "2026-11-16/significant-drone-attack-strikes-crimea-bridge-amidst-increasing-conflict",
+    "review": {
+      "passes": 1,
+      "approved": true,
+      "notes": [
+        {
+          "path": [
+            "body"
+          ],
+          "message": "The claim of a 'massive wave of over 2,000 drones' is supported in the research package but needs clarification on the context that these were intercepted rather than hitting the target.",
+          "severity": "medium"
+        },
+        {
+          "path": [
+            "body"
+          ],
+          "message": "The article mentions 'Ukrainian partisan groups' without sufficient context or attribution. It should specify that these are unofficial and possibly speculative perspectives.",
+          "severity": "medium"
+        },
+        {
+          "path": [
+            "body"
+          ],
+          "message": "The description of the attack as 'the most significant drone attack of the war' is arguable and should be clarified with attribution to Russian officials.",
+          "severity": "low"
+        }
+      ]
+    }
+  },
+  {
     "date": "2026-11-15",
     "title": "Reported Drone Activity in Bahrain and US-Iran Relations",
     "slug": "2026-11-15/reported-drone-activity-in-bahrain-and-us-iran-relations",
