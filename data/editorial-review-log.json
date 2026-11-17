@@ -1,5 +1,61 @@
 [
   {
+    "date": "2026-11-17",
+    "title": "Putin's Crimean Bridge partly collapses as Zelensky hails 'unprecedented' attack by Ukraine",
+    "slug": "2026-11-17/putins-crimean-bridge-partly-collapses-as-zelensky-hails-unprecedented-attack-by-ukraine",
+    "review": {
+      "passes": 2,
+      "approved": false,
+      "notes": [
+        {
+          "path": "body",
+          "message": "The draft claims that the attack on the Crimean Bridge involved both missile and drone components, specifying Flamingo drones and Neptune cruise missiles, without clear attribution from the sources.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The draft suggests a direct link between the attack's timing and geopolitical meetings, which is speculative without direct supporting evidence.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The article outlines missile and drone usage but does not clearly indicate that Flamingo drones and Neptune cruise missiles were confirmed as used, according to the sources.",
+          "severity": "high"
+        },
+        {
+          "path": "body",
+          "message": "Exaggerates Zelensky's characterization of the attack without providing a full context or direct quote from the research.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "Cites potential for escalation but lacks specific details about the nature or likelihood of such retaliations based on the evidence presented in the research.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The article makes an unsupported claim by stating the collapse of the Crimean Bridge 'represents a pivotal moment' without evidence of its unique impact on the conflict.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The article's implication of a direct link between the attack and meetings with US and China lacks evidence and requires clarification.",
+          "severity": "high"
+        },
+        {
+          "path": "body",
+          "message": "The statement about military experts indicating repair time lacks direct attribution to specific experts.",
+          "severity": "high"
+        },
+        {
+          "path": "body",
+          "message": "The article claims the attack has 'notable psychological and symbolic impact on Russian forces' but does not substantiate with specific evidence.",
+          "severity": "medium"
+        }
+      ]
+    }
+  },
+  {
     "date": "2026-11-16",
     "title": "Significant Drone Attack Strikes Crimea Bridge Amidst Increasing Conflict",
     "slug": "2026-11-16/significant-drone-attack-strikes-crimea-bridge-amidst-increasing-conflict",
