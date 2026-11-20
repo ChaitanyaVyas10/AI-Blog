@@ -1,5 +1,32 @@
 [
   {
+    "date": "2026-11-20",
+    "title": "Russian Missile Strike in Poland Raises NATO Concerns Amid Military Exercises",
+    "slug": "2026-11-20/russian-missile-strike-in-poland-raises-nato-concerns-amid-military-exercises",
+    "review": {
+      "passes": 1,
+      "approved": true,
+      "notes": [
+        {
+          "path": [
+            "body",
+            "Incident Overview"
+          ],
+          "message": "The article infers that the missile strike was deliberate based on proximity to NATO exercises, a viewpoint attributed to Polish officials. Ensure the text reflects it as a perspective rather than a definitive fact.",
+          "severity": "medium"
+        },
+        {
+          "path": [
+            "body",
+            "Political and Military Reactions"
+          ],
+          "message": "The claim that NATO jets scrambled in response is not emphasized in the source and should be clearly presented as a perspective or reaction, not a confirmed event.",
+          "severity": "medium"
+        }
+      ]
+    }
+  },
+  {
     "date": "2026-11-19",
     "title": "Myanmar's Genocide Against the Rohingya: A Milestone Verdict by the ICJ",
     "slug": "2026-11-19/myanmars-genocide-against-the-rohingya-a-milestone-verdict-by-the-icj",
