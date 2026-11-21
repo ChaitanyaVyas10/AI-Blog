@@ -1,5 +1,61 @@
 [
   {
+    "date": "2026-11-21",
+    "title": "FBI Investigates Potential Breach of Its Criminal Database",
+    "slug": "2026-11-21/fbi-investigates-potential-breach-of-its-criminal-database",
+    "review": {
+      "passes": 2,
+      "approved": false,
+      "notes": [
+        {
+          "path": "body",
+          "message": "The statement about a breach impacting approximately 38,000 FBI staff members is speculative and not confirmed by the research source.",
+          "severity": "high"
+        },
+        {
+          "path": "body",
+          "message": "Reference to President Donald Trump's comments is misleading due to a chronological inaccuracy; it implies current relevance when the timeline is set in the year 2026.",
+          "severity": "high"
+        },
+        {
+          "path": "body",
+          "message": "The connection made between the FBI breach and unrelated tech outages lacks supporting evidence and context from the research package.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The article presupposes broad national security concerns without specific evidence or expert analysis provided in the research package.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The article contains speculative language ('reportedly') that needs to be clarified with available facts. There are missing confirmations about the FBI's acknowledgment of any breach.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The draft lacks a specific timeline and details on whether the breach has been confirmed by the FBI or not.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The association of ShinyHunters with the current incident is speculative without confirmation in the research package.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The mention of tech outages lacks direct relevance to the breach being discussed.",
+          "severity": "low"
+        },
+        {
+          "path": "body",
+          "message": "The Trump commentary is not clearly linked to the current breach but is included as past context, requiring clearer positioning.",
+          "severity": "low"
+        }
+      ]
+    }
+  },
+  {
     "date": "2026-11-20",
     "title": "Russian Missile Strike in Poland Raises NATO Concerns Amid Military Exercises",
     "slug": "2026-11-20/russian-missile-strike-in-poland-raises-nato-concerns-amid-military-exercises",
