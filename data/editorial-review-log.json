@@ -1,5 +1,61 @@
 [
   {
+    "date": "2026-11-22",
+    "title": "The Growing Humanitarian Toll: Ukrainians Search for Missing in Wake of Russian Strikes",
+    "slug": "2026-11-22/the-growing-humanitarian-toll-ukrainians-search-for-missing-in-wake-of-russian-strikes",
+    "review": {
+      "passes": 2,
+      "approved": false,
+      "notes": [
+        {
+          "path": "draft.body",
+          "message": "The draft refers to ongoing drone attacks, yet doesn't support this claim sufficiently with evidence from the single source provided.",
+          "severity": "medium"
+        },
+        {
+          "path": "draft.body",
+          "message": "The statement about the growing mood of despair among civilians lacks direct attribution or quotes to support this claim, reducing its credibility.",
+          "severity": "medium"
+        },
+        {
+          "path": "draft.body",
+          "message": "The claim about three bodies being recovered is missing complete context or evidence as the source mentions only two identified victims.",
+          "severity": "medium"
+        },
+        {
+          "path": "draft.body",
+          "message": "The source date is incorrectly mentioned as being from 2026, which might confuse the reader regarding the timeline of events.",
+          "severity": "high"
+        },
+        {
+          "path": "body",
+          "message": "The claim about the overall sentiment among Ukrainians being one of anxiety needs more direct support from sources.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "Reference to the woman in her forties and the teenage male as examples need citation from the source material to ensure accuracy.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The article implies a total number of missing persons but does not clarify that this remains unknown as per available information.",
+          "severity": "medium"
+        },
+        {
+          "path": "frontmatter.sources",
+          "message": "The article references only one source, limiting corroboration of claims.",
+          "severity": "medium"
+        },
+        {
+          "path": "revisedArticle.source",
+          "message": "The source URL needs to be verified since it's repeated twice with inconsistent context placement.",
+          "severity": "low"
+        }
+      ]
+    }
+  },
+  {
     "date": "2026-11-21",
     "title": "FBI Investigates Potential Breach of Its Criminal Database",
     "slug": "2026-11-21/fbi-investigates-potential-breach-of-its-criminal-database",
