@@ -1,5 +1,71 @@
 [
   {
+    "date": "2026-11-23",
+    "title": "Russian warship hit by Ukrainian drones in Libya, Zelensky says",
+    "slug": "2026-11-23/russian-warship-hit-by-ukrainian-drones-in-libya-zelensky-says",
+    "review": {
+      "passes": 2,
+      "approved": false,
+      "notes": [
+        {
+          "path": "frontmatter.title",
+          "message": "Title implies confirmed Ukrainian responsibility and its consequences, which needs clearer attribution, given the complexity of international reporting.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "Claim of Ukrainian forces launching a drone attack needs direct attributions or contextual clarification, as responsibility is stated as per Zelensky but remains part of ongoing international investigations.",
+          "severity": "high"
+        },
+        {
+          "path": "body",
+          "message": "Assertion that ships were used for weapons transport is based on Zelensky's claim, which should be attributed more clearly as alleged information rather than confirmed fact.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The phrase 'heightened tensions between Russia and Ukraine' is broad and lacks detailed support from the research reference, which emphasizes the broader escalating nature without direct commentary from key figures.",
+          "severity": "low"
+        },
+        {
+          "path": "body",
+          "message": "Description of Libya's potential involvement in the conflict requires more nuanced contextual support from multiple sources to reinforce the complexity of international and domestic politics involved.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "Lack of explicit mention of why Ukrainian authorities remained silent on the attack on Sparta II, apart from speculation, needs addressing to avoid unsupported assumptions.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The claim that Ukrainian President Volodymyr Zelensky confirmed the attacks has not been independently verified, resulting in potential overconfidence in the claim's validity.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The article lacks emphasis on the uncertainty regarding Ukraine's responsibility for the attack on the commercial ship MV ANGARA.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The draft does not mention that details surrounding both attacks are still under investigation, which is crucial context for the ongoing situation.",
+          "severity": "high"
+        },
+        {
+          "path": "body",
+          "message": "The mention of responses from Libya's governments should clarify the distinction between the two governments involved (Tripoli and Benghazi) for better context.",
+          "severity": "low"
+        },
+        {
+          "path": "body",
+          "message": "The article provides possibly misleading balance by giving the Kremlin's perspective a secondary mention compared to Zelensky's statement.",
+          "severity": "medium"
+        }
+      ]
+    }
+  },
+  {
     "date": "2026-11-22",
     "title": "The Growing Humanitarian Toll: Ukrainians Search for Missing in Wake of Russian Strikes",
     "slug": "2026-11-22/the-growing-humanitarian-toll-ukrainians-search-for-missing-in-wake-of-russian-strikes",
