@@ -1,5 +1,51 @@
 [
   {
+    "date": "2026-11-24",
+    "title": "Israeli Air Strike Kills Hamas Internal Security Chief in Gaza",
+    "slug": "2026-11-24/israeli-air-strike-kills-hamas-internal-security-chief-in-gaza",
+    "review": {
+      "passes": 2,
+      "approved": false,
+      "notes": [
+        {
+          "path": "body[2]",
+          "message": "The claim that Abu Nahel was combating gangs allegedly collaborating with Israel is presented without direct evidence or references in the research.",
+          "severity": "medium"
+        },
+        {
+          "path": "body[3]",
+          "message": "The statement regarding the continuation of military interventions either weekly or daily lacks specific sources or details from the research to support the frequency described.",
+          "severity": "medium"
+        },
+        {
+          "path": "body[6]",
+          "message": "Casualty statistics for both sides are mentioned but lack specific context about how and why these numbers were collated, which is important for clarity and accuracy.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The claim about Naeem Abu Nahel's involvement in combating local gangs lacks supporting evidence from the given research.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "The statement about Israeli strikes following a U.S.-brokered ceasefire lacks specificity and may imply unsubstantiated instability of the ceasefire.",
+          "severity": "medium"
+        },
+        {
+          "path": "body",
+          "message": "Lack of information about the source that provides civilian and militant casualty distinction.",
+          "severity": "medium"
+        },
+        {
+          "path": "frontmatter.sources",
+          "message": "Only one source is provided, which may not be sufficient for comprehensive coverage of the event.",
+          "severity": "medium"
+        }
+      ]
+    }
+  },
+  {
     "date": "2026-11-23",
     "title": "Russian warship hit by Ukrainian drones in Libya, Zelensky says",
     "slug": "2026-11-23/russian-warship-hit-by-ukrainian-drones-in-libya-zelensky-says",
